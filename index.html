@@ -3,20 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="ArtesEmFerro — Serralheria artística, peças sob medida e fabricação artesanal em ferro e aço. Suportes, prateleiras, estruturas e móveis industriais com precisão e acabamento superior." />
-  <meta name="keywords" content="serralheria artística, ferro sob medida, prateleiras de ferro, suporte artesanal, móveis industriais, fabricação personalizada, aço, soldagem" />
+  <meta name="description" content="ArtesEmFerro — Soluções industriais e artesanais em ferro e aço sob medida. Catálogo técnico de estruturas, móveis, suportes e portões com cotação direta no WhatsApp." />
+  <meta name="keywords" content="serralheria, ferro e aço, metalúrgica sob medida, tubos metálicos, metalon, móveis industriais, prateleiras de ferro, portões e grades, Bauru, orçamento rápido" />
   <meta name="author" content="ArtesEmFerro" />
-  <meta property="og:title" content="ArtesEmFerro — Serralheria Artística Sob Medida" />
-  <meta property="og:description" content="Peças artesanais em ferro e aço fabricadas com precisão e acabamento superior. Solicite seu orçamento." />
+  
+  <!-- Open Graph / Meta Compartilhamento -->
+  <meta property="og:title" content="ArtesEmFerro | Soluções em Aço e Ferro Sob Medida" />
+  <meta property="og:description" content="Escolha estruturas, móveis industriais, suportes e portões. Cotação técnica ágil via WhatsApp." />
   <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#1a1a1e" />
-  <title>ArtesEmFerro — Serralheria Artística Sob Medida</title>
+  <meta property="og:image" content="./assets/logo.jpg" />
+  <meta name="theme-color" content="#050b14" />
+  <title>ArtesEmFerro | Materiais em Ferro &amp; Aço Sob Medida para Orçamento</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Playfair+Display:wght@700;900&display=swap"
     rel="stylesheet"
   />
 
@@ -25,22 +28,50 @@
 <body>
 
   <!-- ═══════════════════════════════════════════
-       TOAST DE FEEDBACK (COPIAR EMAIL)
+       TOAST DE NOTIFICAÇÃO
   ═══════════════════════════════════════════ -->
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <!-- ═══════════════════════════════════════════
-       HEADER / NAVEGAÇÃO
+       TOP BAR UTILITÁRIA (Inspirada no modelo industrial)
+  ═══════════════════════════════════════════ -->
+  <div class="topbar" role="region" aria-label="Informações de atendimento">
+    <div class="container">
+      <div class="topbar-left">
+        <div class="topbar-item">
+          <span class="badge-live"><span class="badge-live-dot"></span> Atendimento Online</span>
+        </div>
+        <div class="topbar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          <span>Bauru, Jaú, Botucatu e Centro-Oeste Paulista</span>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Segunda a Sexta: 07:30 às 18:00</span>
+        </div>
+        <div class="topbar-item">
+          <a href="https://wa.me/5514998278402?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20tirar%20uma%20dúvida." target="_blank" rel="noopener noreferrer">
+            WhatsApp Direto: <strong>(14) 99827-8402</strong>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       HEADER PRINCIPAL
   ═══════════════════════════════════════════ -->
   <header id="site-header" role="banner">
     <div class="container">
 
       <!-- Logo -->
-      <a href="#inicio" class="site-logo" aria-label="ArtesEmFerro — Ir para o início">
-        <img src="./assets/logo.jpg" alt="ArtesEmFerro — Serralheria Artística" class="site-logo-img" width="140" height="48" />
+      <a href="#hero" class="site-logo" aria-label="ArtesEmFerro — Voltar ao topo">
+        <img src="./assets/logo.jpg" alt="ArtesEmFerro — Serralheria Artística e Estrutural" class="site-logo-img" width="140" height="44" />
       </a>
 
-      <!-- Toggle mobile -->
+      <!-- Botão Menu Mobile -->
       <button
         class="nav-toggle"
         id="nav-toggle"
@@ -53,24 +84,42 @@
         <span></span>
       </button>
 
-      <!-- Navegação principal -->
+      <!-- Navegação Principal -->
       <nav class="site-nav" id="main-nav" role="navigation" aria-label="Navegação principal">
-        <a href="#inicio"   class="nav-link" aria-current="page">Início</a>
-        <a href="#catalogo" class="nav-link">Catálogo e Medidas</a>
-        <a href="#sobre"    class="nav-link">Sobre</a>
+        <a href="#hero" class="nav-link" aria-current="page">Início</a>
+        <a href="#aplicacoes" class="nav-link">Aplicações</a>
+        <a href="#catalogo" class="nav-link">Catálogo &amp; Medidas</a>
+        <a href="#como-orcar" class="nav-link">Como Orçar</a>
+        <a href="#diferenciais" class="nav-link">Diferenciais</a>
+        <a href="#sobre" class="nav-link">Sobre</a>
         <a href="./politica-de-uso.html" class="nav-link">Política de Uso</a>
-        <a href="#contato"  class="nav-link">Contato</a>
+        <a href="#contato" class="nav-link">Contato</a>
+      </nav>
+
+      <!-- Ações do Header: Bandeja de Cotação + WhatsApp Express -->
+      <div class="header-actions">
+        <button
+          class="quote-tray-btn"
+          id="open-quote-drawer"
+          aria-label="Ver lista de orçamento selecionada"
+          title="Abrir lista de cotação"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span>Orçamento</span>
+          <span class="quote-counter-badge" id="quote-count-badge">0</span>
+        </button>
+
         <a
-          href="https://wa.me/5514998278402?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento."
+          href="https://wa.me/5514998278402?text=Olá!%20Vim%20pelo%20site%20da%20ArtesEmFerro%20e%20gostaria%20de%20solicitar%20um%20orçamento."
           target="_blank"
           rel="noopener noreferrer"
-          class="btn btn-primary btn-sm nav-cta"
-          aria-label="Solicitar orçamento via WhatsApp (abre em nova aba)"
+          class="btn btn-whatsapp btn-sm"
+          aria-label="Solicitar orçamento rápido no WhatsApp (abre em nova aba)"
         >
-          <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.874L.057 23.999l6.305-1.654A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-5.058-1.407l-.362-.216-3.743.981.999-3.651-.237-.374A9.796 9.796 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
-          WhatsApp
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.874L.057 23.999l6.305-1.654A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-5.058-1.407l-.362-.216-3.743.981.999-3.651-.237-.374A9.796 9.796 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+          <span>WhatsApp</span>
         </a>
-      </nav>
+      </div>
 
     </div>
   </header>
@@ -78,125 +127,302 @@
   <main id="conteudo-principal">
 
     <!-- ═══════════════════════════════════════════
-         HERO SECTION
+         HERO SECTION (Estilo Imesul Metalúrgica)
     ═══════════════════════════════════════════ -->
-    <section id="inicio" aria-label="Apresentação — ArtesEmFerro">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="hero-accent" aria-hidden="true"></div>
+    <section id="hero" aria-label="Apresentação — ArtesEmFerro">
+      <div class="industrial-grid-bg" aria-hidden="true"></div>
+      <div class="industrial-radial-glow" aria-hidden="true"></div>
 
-      <div class="container" style="position:relative;z-index:2;padding-block:clamp(4rem,10vw,8rem);">
+      <div class="container">
         <div class="hero-content">
 
-          <p class="hero-eyebrow">Fabricação Artesanal · Ferro &amp; Aço</p>
+          <div class="hero-eyebrow">
+            <span class="status-dot"></span>
+            <span>METALÚRGICA &amp; SERRALHERIA INDUSTRIAL · <strong>SOB MEDIDA</strong></span>
+          </div>
 
           <h1 class="hero-title">
-            Peças únicas forjadas<br>
-            com <em>precisão artesanal</em>
+            Peças e estruturas em aço <br>
+            para <span class="text-highlight">obra, comércio e residência</span>.
           </h1>
 
           <p class="hero-desc">
-            Suportes, prateleiras, estruturas e móveis industriais fabricados
-            sob medida. Cada peça é projetada e soldada com atenção ao detalhe,
-            resistência estrutural e acabamento que dura décadas.
+            Suportes de carga, móveis industriais, prateleiras reforçadas, escadas e portões fabricados
+            sob gabarito milimétrico. Selecione suas peças, confira as medidas de referência e envie sua
+            solicitação para confirmação imediata de disponibilidade e valor.
           </p>
 
+          <!-- Barra de Busca Rápida Técnica -->
+          <div class="hero-search-box" role="search" aria-label="Busca de produtos do catálogo">
+            <div class="hero-search-inner">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input
+                type="text"
+                id="hero-search-field"
+                class="hero-search-input"
+                placeholder="Busque por produto ou especificação (ex: metalon, suporte, mesa, escada...)"
+                aria-label="Campo de pesquisa de produtos"
+              />
+            </div>
+            <div class="hero-quick-tags">
+              <span class="hero-quick-tag-label">Atalhos rápidos:</span>
+              <button class="quick-chip" onclick="filterCatalog('todos')">Todos</button>
+              <button class="quick-chip" onclick="filterCatalog('moveis')">Mesas &amp; Móveis</button>
+              <button class="quick-chip" onclick="filterCatalog('suportes')">Prateleiras &amp; Suportes</button>
+              <button class="quick-chip" onclick="filterCatalog('portoes')">Grades &amp; Portões</button>
+              <button class="quick-chip" onclick="filterCatalog('estruturas')">Escadas &amp; Corrimãos</button>
+            </div>
+          </div>
+
           <div class="hero-actions">
-            <a
-              href="#catalogo"
-              class="btn btn-primary btn-lg"
-              aria-label="Ver catálogo completo de peças"
-            >
-              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-              Ver o Catálogo
+            <a href="#catalogo" class="btn btn-primary btn-lg">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              Explorar Catálogo Técnico
             </a>
             <a
-              href="https://wa.me/5514998278402?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20personalizado%20para%20uma%20peça%20em%20ferro."
+              href="https://wa.me/5514998278402?text=Olá!%20Gostaria%20de%20solicitar%20uma%20cotação%20para%20um%20projeto%20sob%20medida."
               target="_blank"
               rel="noopener noreferrer"
               class="btn btn-outline btn-lg"
-              aria-label="Solicitar orçamento personalizado via WhatsApp (abre em nova aba)"
             >
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.874L.057 23.999l6.305-1.654A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-5.058-1.407l-.362-.216-3.743.981.999-3.651-.237-.374A9.796 9.796 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
-              Solicitar Orçamento
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+              Orçar Projeto Personalizado
             </a>
           </div>
 
-          <div class="hero-stats" role="list" aria-label="Destaques da ArtesEmFerro">
-            <div role="listitem">
-              <div class="hero-stat-value">100%</div>
-              <div class="hero-stat-label">Sob medida</div>
+          <!-- Destaques Técnicos de Confiança -->
+          <div class="hero-tech-grid" role="list">
+            <div class="tech-stat-card" role="listitem">
+              <div class="tech-stat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+              </div>
+              <div>
+                <div class="tech-stat-title">100% Sob Medida</div>
+                <div class="tech-stat-desc">Projetos ajustados milimetricamente ao seu espaço.</div>
+              </div>
             </div>
-            <div role="listitem">
-              <div class="hero-stat-value">+5 anos</div>
-              <div class="hero-stat-label">De experiência</div>
+
+            <div class="tech-stat-card" role="listitem">
+              <div class="tech-stat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <div class="tech-stat-title">Aço Certificado</div>
+                <div class="tech-stat-desc">Aço SAE 1020 e perfis estruturais de alta resistência.</div>
+              </div>
             </div>
-            <div role="listitem">
-              <div class="hero-stat-value">Ferro</div>
-              <div class="hero-stat-label">&amp; Aço de qualidade</div>
+
+            <div class="tech-stat-card" role="listitem">
+              <div class="tech-stat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <div>
+                <div class="tech-stat-title">Solda MIG/MAG &amp; TIG</div>
+                <div class="tech-stat-desc">Fusão profunda, esmerilhamento e acabamento anticorrosivo.</div>
+              </div>
             </div>
-            <div role="listitem">
-              <div class="hero-stat-value">Garantia</div>
-              <div class="hero-stat-label">Estrutural vitalícia</div>
+
+            <div class="tech-stat-card" role="listitem">
+              <div class="tech-stat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <div class="tech-stat-title">Orçamento Ágil</div>
+                <div class="tech-stat-desc">Atendimento direto com serralheiro via WhatsApp.</div>
+              </div>
             </div>
           </div>
 
         </div>
       </div>
+    </section>
 
-      <div class="scroll-indicator" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        <span>Explorar</span>
+    <!-- ═══════════════════════════════════════════
+         SEÇÃO: ESCOLHA PELO TIPO DE APLICAÇÃO (Modelo Imesul)
+    ═══════════════════════════════════════════ -->
+    <section id="aplicacoes" aria-labelledby="titulo-aplicacoes">
+      <div class="container">
+        
+        <div class="section-badge">
+          <span class="status-dot"></span>
+          <span>Linhas de Atuação</span>
+        </div>
+        <h2 class="section-title" id="titulo-aplicacoes">Escolha pelo tipo de aplicação</h2>
+        <p class="section-desc">
+          Do mobiliário industrial contemporâneo a estruturas pesadas de serralheria, entregamos peças
+          com resistência estrutural e precisão estética.
+        </p>
+
+        <div class="applications-grid">
+
+          <!-- Card 1: Residencial & Interiores -->
+          <article class="app-card" onclick="filterCatalog('moveis')" tabindex="0" role="button" aria-label="Filtrar produtos de Móveis e Interiores">
+            <div class="app-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <h3 class="app-card-title">Móveis &amp; Interiores</h3>
+            <p class="app-card-desc">
+              Estruturas minimalistas e robustas para compor ambientes com visual industrial sofisticado.
+            </p>
+            <ul class="app-card-items">
+              <li>Mesas de centro e jantar com base de aço</li>
+              <li>Prateleiras suspensas em cantoneira</li>
+              <li>Estantes modulares em perfil metalon</li>
+            </ul>
+            <div class="app-card-action">Ver peças desta linha →</div>
+          </article>
+
+          <!-- Card 2: Comercial & Corporativo -->
+          <article class="app-card" onclick="filterCatalog('suportes')" tabindex="0" role="button" aria-label="Filtrar suportes e peças comerciais">
+            <div class="app-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3 class="app-card-title">Comércio &amp; Lojas</h3>
+            <p class="app-card-desc">
+              Mobiliário e suportes para vitrines, showrooms, escritórios e estabelecimentos gastronômicos.
+            </p>
+            <ul class="app-card-items">
+              <li>Araras e expositores reforçados</li>
+              <li>Bancadas de atendimento e caixas</li>
+              <li>Suportes murais de alta capacidade</li>
+            </ul>
+            <div class="app-card-action">Ver peças desta linha →</div>
+          </article>
+
+          <!-- Card 3: Segurança & Fechamentos -->
+          <article class="app-card" onclick="filterCatalog('portoes')" tabindex="0" role="button" aria-label="Filtrar portões e grades">
+            <div class="app-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+            </div>
+            <h3 class="app-card-title">Segurança &amp; Fechamentos</h3>
+            <p class="app-card-desc">
+              Proteção com design: portões reforçados, gradis e grades com soldas resistentes e acabamento fino.
+            </p>
+            <ul class="app-card-items">
+              <li>Portões pivotantes e basculantes</li>
+              <li>Grades artísticas em barra chata</li>
+              <li>Telas e divisórias metálicas</li>
+            </ul>
+            <div class="app-card-action">Ver peças desta linha →</div>
+          </article>
+
+          <!-- Card 4: Estrutural & Obra -->
+          <article class="app-card" onclick="filterCatalog('estruturas')" tabindex="0" role="button" aria-label="Filtrar escadas e estruturas">
+            <div class="app-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 20h4v-4h4v-4h4v-4h4V4"/><path d="M3 20L20 3"/></svg>
+            </div>
+            <h3 class="app-card-title">Estruturas &amp; Mezaninos</h3>
+            <p class="app-card-desc">
+              Execução conforme normas técnicas (NBR), vigas, escadas de alta carga e corrimãos de apoio.
+            </p>
+            <ul class="app-card-items">
+              <li>Escadas caracol, marinheiro e retas</li>
+              <li>Corrimãos de segurança NBR 9077</li>
+              <li>Gabaritos e estruturas especiais</li>
+            </ul>
+            <div class="app-card-action">Ver peças desta linha →</div>
+          </article>
+
+        </div>
       </div>
     </section>
 
     <!-- ═══════════════════════════════════════════
-         CATÁLOGO E MEDIDAS
+         CATÁLOGO E MEDIDAS TÉCNICAS
     ═══════════════════════════════════════════ -->
     <section id="catalogo" aria-labelledby="titulo-catalogo">
       <div class="container">
 
-        <p class="section-label">Catálogo &amp; Medidas</p>
-        <h2 class="section-title" id="titulo-catalogo">Nossas Peças</h2>
+        <div class="section-badge">
+          <span class="status-dot"></span>
+          <span>Catálogo de Peças &amp; Materiais</span>
+        </div>
+        <h2 class="section-title" id="titulo-catalogo">Produtos &amp; Especificações</h2>
         <p class="section-desc">
-          Cada item é fabricado com materiais selecionados, soldagem de precisão e
-          acabamento personalizado. As medidas abaixo são referência — tudo pode ser
-          adaptado ao seu espaço e necessidade.
+          Consulte especificações de aço, espessura e medidas padrão. Adicione os itens à sua
+          <strong>bandeja de orçamento</strong> ou envie uma mensagem direta para confirmação de medidas e prazo.
         </p>
 
-        <div class="catalog-grid" role="list" aria-label="Catálogo de peças">
+        <!-- Barra de Controle do Catálogo (Filtros + Busca instantânea) -->
+        <div class="catalog-filter-bar">
+          <div class="category-tabs" role="tablist" aria-label="Filtro de categorias">
+            <button class="category-tab active" data-filter="todos" onclick="filterCatalog('todos')" role="tab" aria-selected="true">
+              Todos <span class="tab-count" id="count-todos">6</span>
+            </button>
+            <button class="category-tab" data-filter="moveis" onclick="filterCatalog('moveis')" role="tab" aria-selected="false">
+              Mesas &amp; Móveis <span class="tab-count" id="count-moveis">1</span>
+            </button>
+            <button class="category-tab" data-filter="suportes" onclick="filterCatalog('suportes')" role="tab" aria-selected="false">
+              Estantes &amp; Suportes <span class="tab-count" id="count-suportes">2</span>
+            </button>
+            <button class="category-tab" data-filter="portoes" onclick="filterCatalog('portoes')" role="tab" aria-selected="false">
+              Grades &amp; Portões <span class="tab-count" id="count-portoes">1</span>
+            </button>
+            <button class="category-tab" data-filter="estruturas" onclick="filterCatalog('estruturas')" role="tab" aria-selected="false">
+              Escadas &amp; Corrimãos <span class="tab-count" id="count-estruturas">1</span>
+            </button>
+            <button class="category-tab" data-filter="especiais" onclick="filterCatalog('especiais')" role="tab" aria-selected="false">
+              Painéis &amp; Especiais <span class="tab-count" id="count-especiais">1</span>
+            </button>
+          </div>
+
+          <div class="catalog-search-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input
+              type="text"
+              id="catalog-search-input"
+              class="catalog-search-input"
+              placeholder="Filtrar por nome ou medida..."
+              aria-label="Filtrar itens do catálogo"
+            />
+          </div>
+        </div>
+
+        <!-- Grid de Produtos -->
+        <div class="catalog-grid" id="products-container" role="list">
 
           <!-- ─── CARD 1: Suporte / Estante Artesanal ─── -->
-          <article class="product-card" role="listitem" aria-label="Suporte Estante Artesanal">
+          <article
+            class="product-card"
+            data-category="suportes"
+            data-id="suporte-estante"
+            data-title="Suporte Estante Artesanal"
+            data-measure="80 x 180 x 30 cm"
+            role="listitem"
+            aria-label="Suporte Estante Artesanal"
+          >
             <div class="card-image-wrap">
-              <!--
-                INSTRUÇÃO: Substitua a tag abaixo por uma <img> real.
-                Coloque a foto em ./assets/catalog/suporte-estante.jpg
-                Exemplo:
-                <img src="./assets/catalog/suporte-estante.jpg" alt="Suporte estante artesanal em ferro com prateleiras de madeira" loading="lazy" />
-              -->
               <div class="card-image-placeholder" aria-label="Aguardando foto: Suporte Estante Artesanal">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 9v6"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 9v6"/></svg>
                 <span>Suporte Estante Artesanal</span>
-                <span style="font-size:0.65rem;opacity:.6">→ assets/catalog/suporte-estante.jpg</span>
+                <span style="font-size:0.65rem;opacity:.6">assets/catalog/suporte-estante.jpg</span>
               </div>
               <span class="card-badge">Sob Medida</span>
+              <div class="card-spec-tags">
+                <span class="spec-tag">Perfil 20x20 mm</span>
+                <span class="spec-tag">Aço SAE 1020</span>
+                <span class="spec-tag">Solda MIG/MAG</span>
+              </div>
             </div>
 
             <div class="card-body">
-              <span class="card-category">Estante · Suporte</span>
+              <div class="card-header-meta">
+                <span class="card-category">Estante · Suporte de Carga</span>
+              </div>
               <h3 class="card-title">Suporte Estante Artesanal</h3>
 
               <p class="card-desc">
-                Estrutura principal em perfil quadrado de aço carbono com soldagem MIG/MAG
-                de alta resistência. Acabamento em primer anticorrosivo e esmalte epóxi
-                preto fosco ou grafite. Prateleiras compatíveis com tampos de madeira maciça,
-                MDF ou vidro (fornecidos pelo cliente ou sob encomenda).
-                Suporta ambientes internos e externos com proteção adicional.
+                Estrutura robusta em perfil quadrado de aço carbono com soldagem contínua MIG/MAG.
+                Tratamento anticorrosivo em esmalte industrial ou epóxi (preto fosco ou grafite).
+                Compatível com prateleiras em madeira maciça, MDF ou chapas de aço perfuradas.
               </p>
 
-              <div class="measures-block" role="region" aria-label="Medidas do Suporte Estante Artesanal">
-                <div class="measures-title">Medidas de Referência</div>
-                <table class="measures-table" aria-label="Especificações técnicas">
+              <div class="measures-block">
+                <div class="measures-title">
+                  <span>Medidas de Referência</span>
+                  <span>Capacidade: 40kg/nível</span>
+                </div>
+                <table class="measures-table">
                   <tbody>
                     <tr>
                       <td>Largura total</td>
@@ -212,73 +438,81 @@
                     </tr>
                     <tr>
                       <td>Perfil estrutural</td>
-                      <td>20×20 mm — esp. 1,5 mm</td>
+                      <td>20×20 mm — parede 1,5 mm</td>
                     </tr>
                     <tr>
                       <td>Nº de prateleiras</td>
-                      <td>5 (ajustável)</td>
-                    </tr>
-                    <tr>
-                      <td>Capacidade por nível</td>
-                      <td>até 40 kg</td>
-                    </tr>
-                    <tr>
-                      <td>Personalização</td>
-                      <td>Qualquer medida</td>
+                      <td>5 níveis (ajustáveis)</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
 
-              <p class="card-note">
-                💡 Dimensões e cor por demanda. Consulte disponibilidade de tampos.
-              </p>
-
-              <a
-                href="https://wa.me/5514998278402?text=Olá!%20Tenho%20interesse%20no%20Suporte%20Estante%20Artesanal.%20Poderia%20me%20passar%20um%20orçamento%3F"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-whatsapp"
-                aria-label="Solicitar orçamento para Suporte Estante Artesanal via WhatsApp"
-              >
-                <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.874L.057 23.999l6.305-1.654A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-5.058-1.407l-.362-.216-3.743.981.999-3.651-.237-.374A9.796 9.796 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
-                Orçar via WhatsApp
-              </a>
+              <div class="card-actions-row">
+                <button
+                  class="btn btn-add-quote"
+                  onclick="toggleQuoteItem('suporte-estante', 'Suporte Estante Artesanal', '80 x 180 x 30 cm', this)"
+                >
+                  + Adicionar à Cotação
+                </button>
+                <a
+                  href="https://wa.me/5514998278402?text=Olá!%20Tenho%20interesse%20no%20Suporte%20Estante%20Artesanal.%20Poderia%20me%20passar%20um%20orçamento%3F"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-whatsapp btn-sm"
+                  aria-label="Orçar Suporte Estante Artesanal via WhatsApp"
+                >
+                  Orçar
+                </a>
+              </div>
             </div>
           </article>
 
           <!-- ─── CARD 2: Prateleira Suspensa em Aço ─── -->
-          <article class="product-card" role="listitem" aria-label="Prateleira Suspensa em Aço">
+          <article
+            class="product-card"
+            data-category="suportes"
+            data-id="prateleira-suspensa"
+            data-title="Prateleira Suspensa em Aço"
+            data-measure="80 x 25 x 30 cm"
+            role="listitem"
+            aria-label="Prateleira Suspensa em Aço"
+          >
             <div class="card-image-wrap">
-              <!--
-                INSTRUÇÃO: Substitua pela tag <img> com a foto real.
-                Arquivo: ./assets/catalog/prateleira-suspensa.jpg
-              -->
               <div class="card-image-placeholder" aria-label="Aguardando foto: Prateleira Suspensa em Aço">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12H2l5-9 5 9H8M5 12v6a1 1 0 001 1h2a1 1 0 001-1v-6"/><path d="M14 12h8M14 8h8M14 16h8"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12H2l5-9 5 9H8M5 12v6a1 1 0 001 1h2a1 1 0 001-1v-6"/><path d="M14 12h8M14 8h8M14 16h8"/></svg>
                 <span>Prateleira Suspensa em Aço</span>
-                <span style="font-size:0.65rem;opacity:.6">→ assets/catalog/prateleira-suspensa.jpg</span>
+                <span style="font-size:0.65rem;opacity:.6">assets/catalog/prateleira-suspensa.jpg</span>
               </div>
-              <span class="card-badge">Mais vendido</span>
+              <span class="card-badge">Mais Vendido</span>
+              <div class="card-spec-tags">
+                <span class="spec-tag">Cantoneira 30x30 mm</span>
+                <span class="spec-tag">Chapa 1.0 mm</span>
+                <span class="spec-tag">Fixação Reforçada</span>
+              </div>
             </div>
 
             <div class="card-body">
-              <span class="card-category">Prateleira · Suspensa</span>
+              <div class="card-header-meta">
+                <span class="card-category">Prateleira · Suspensa</span>
+              </div>
               <h3 class="card-title">Prateleira Suspensa em Aço</h3>
 
               <p class="card-desc">
-                Suportes em cantoneira de aço carbono fixados à parede com plugs de alta
-                resistência. Chapa superior em aço 1 mm ou tampo de madeira. Acabamento
-                fosco com primer anticorrosivo, disponível em preto, branco ou personalizado.
-                Ideal para cozinhas, banheiros, escritórios e salas com estilo industrial.
+                Cantoneira de aço carbono projetada para ancoragem firme com buchas de alta resistência.
+                Opções com chapa superior em aço dobrado ou travessas para madeira.
+                Acabamento fosco anticorrosivo ideal para cozinhas gourmet, adegas e escritórios.
               </p>
 
-              <div class="measures-block" role="region" aria-label="Medidas da Prateleira Suspensa">
-                <div class="measures-title">Medidas de Referência</div>
-                <table class="measures-table" aria-label="Especificações técnicas">
+              <div class="measures-block">
+                <div class="measures-title">
+                  <span>Medidas de Referência</span>
+                  <span>Carga: até 20kg</span>
+                </div>
+                <table class="measures-table">
                   <tbody>
                     <tr>
-                      <td>Largura</td>
+                      <td>Comprimento</td>
                       <td>60 / 80 / 100 cm</td>
                     </tr>
                     <tr>
@@ -286,166 +520,178 @@
                       <td>20 / 25 / 30 cm</td>
                     </tr>
                     <tr>
-                      <td>Espessura da chapa</td>
-                      <td>1,0 mm (aço 1010)</td>
-                    </tr>
-                    <tr>
-                      <td>Suporte (cantoneira)</td>
+                      <td>Cantoneira base</td>
                       <td>30×30 mm — esp. 2 mm</td>
                     </tr>
                     <tr>
-                      <td>Capacidade</td>
-                      <td>até 20 kg por prateleira</td>
+                      <td>Chapa superior</td>
+                      <td>Aço 1010 de 1,0 mm</td>
                     </tr>
                     <tr>
                       <td>Fixação</td>
-                      <td>Parafuso + bucha 8 mm</td>
-                    </tr>
-                    <tr>
-                      <td>Personalização</td>
-                      <td>Largura livre</td>
+                      <td>Parafusos + buchas 8 mm</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
 
-              <p class="card-note">
-                💡 Vendida individualmente ou em kit. Consulte conjuntos com múltiplos níveis.
-              </p>
-
-              <a
-                href="https://wa.me/5514998278402?text=Olá!%20Gostaria%20de%20orçar%20a%20Prateleira%20Suspensa%20em%20Aço.%20Pode%20me%20ajudar%3F"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-whatsapp"
-                aria-label="Solicitar orçamento para Prateleira Suspensa em Aço via WhatsApp"
-              >
-                <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.874L.057 23.999l6.305-1.654A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-5.058-1.407l-.362-.216-3.743.981.999-3.651-.237-.374A9.796 9.796 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
-                Orçar via WhatsApp
-              </a>
+              <div class="card-actions-row">
+                <button
+                  class="btn btn-add-quote"
+                  onclick="toggleQuoteItem('prateleira-suspensa', 'Prateleira Suspensa em Aço', '80 x 25 x 30 cm', this)"
+                >
+                  + Adicionar à Cotação
+                </button>
+                <a
+                  href="https://wa.me/5514998278402?text=Olá!%20Gostaria%20de%20orçar%20a%20Prateleira%20Suspensa%20em%20Aço.%20Pode%20me%20ajudar%3F"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-whatsapp btn-sm"
+                  aria-label="Orçar Prateleira Suspensa via WhatsApp"
+                >
+                  Orçar
+                </a>
+              </div>
             </div>
           </article>
 
           <!-- ─── CARD 3: Mesa / Estrutura Sob Medida ─── -->
-          <article class="product-card" role="listitem" aria-label="Mesa Estrutura Sob Medida">
+          <article
+            class="product-card"
+            data-category="moveis"
+            data-id="mesa-estrutura"
+            data-title="Mesa / Estrutura Sob Medida"
+            data-measure="140 x 80 x 75 cm"
+            role="listitem"
+            aria-label="Mesa Estrutura Sob Medida"
+          >
             <div class="card-image-wrap">
-              <!--
-                INSTRUÇÃO: Substitua pela tag <img> com a foto real.
-                Arquivo: ./assets/catalog/mesa-estrutura.jpg
-              -->
               <div class="card-image-placeholder" aria-label="Aguardando foto: Mesa / Estrutura Sob Medida">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="7" width="20" height="3" rx="1"/><path d="M5 10v7M19 10v7M7 17h10"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="3" rx="1"/><path d="M5 10v7M19 10v7M7 17h10"/></svg>
                 <span>Mesa / Estrutura Sob Medida</span>
-                <span style="font-size:0.65rem;opacity:.6">→ assets/catalog/mesa-estrutura.jpg</span>
+                <span style="font-size:0.65rem;opacity:.6">assets/catalog/mesa-estrutura.jpg</span>
               </div>
-              <span class="card-badge">Premium</span>
+              <span class="card-badge">Linha Industrial</span>
+              <div class="card-spec-tags">
+                <span class="spec-tag">Tubo 50x30 mm</span>
+                <span class="spec-tag">Nivelador Embutido</span>
+                <span class="spec-tag">Suporta até 150kg</span>
+              </div>
             </div>
 
             <div class="card-body">
-              <span class="card-category">Mesa · Estrutura Industrial</span>
+              <div class="card-header-meta">
+                <span class="card-category">Mesa · Base Estrutural</span>
+              </div>
               <h3 class="card-title">Mesa / Estrutura Sob Medida</h3>
 
               <p class="card-desc">
-                Base e estrutura completa em tubo retangular ou cano ferro galvanizado,
-                com niveladores reguláveis embutidos. Soldagem TIG ou MIG nos pontos
-                estruturais, acabamento lixado e aplicação de verniz wax ou esmalte
-                de alta temperatura. Aceita tampos em madeira maciça, granito, vidro
-                ou MDF naval. Projeto e medidas inteiramente definidos pelo cliente.
+                Base estrutural em tubo retangular ou quadrado, com niveladores reguláveis embutidos para
+                compensar desníveis de piso. Soldagem TIG/MIG nos vértices com polimento fino. Aceita
+                tampos de madeira maciça, granito, vidro temperado ou porcelanato.
               </p>
 
-              <div class="measures-block" role="region" aria-label="Medidas da Mesa Estrutura Sob Medida">
-                <div class="measures-title">Medidas de Referência</div>
-                <table class="measures-table" aria-label="Especificações técnicas">
+              <div class="measures-block">
+                <div class="measures-title">
+                  <span>Medidas de Referência</span>
+                  <span>Carga: até 150kg</span>
+                </div>
+                <table class="measures-table">
                   <tbody>
                     <tr>
-                      <td>Largura</td>
-                      <td>Sob medida (mín. 60 cm)</td>
-                    </tr>
-                    <tr>
                       <td>Comprimento</td>
-                      <td>Sob medida (mín. 80 cm)</td>
+                      <td>Sob medida (ref. 140 cm)</td>
                     </tr>
                     <tr>
-                      <td>Altura</td>
-                      <td>75 cm (padrão) / ajustável</td>
+                      <td>Largura</td>
+                      <td>Sob medida (ref. 80 cm)</td>
+                    </tr>
+                    <tr>
+                      <td>Altura padrão</td>
+                      <td>75 cm (ajuste ±15 mm)</td>
                     </tr>
                     <tr>
                       <td>Tubo estrutural</td>
                       <td>50×30 mm — esp. 1,5 mm</td>
                     </tr>
                     <tr>
-                      <td>Niveladores</td>
-                      <td>Incluso (regulagem ±15 mm)</td>
-                    </tr>
-                    <tr>
-                      <td>Capacidade</td>
-                      <td>até 150 kg (tampo excl.)</td>
-                    </tr>
-                    <tr>
-                      <td>Tampo</td>
-                      <td>Por conta do cliente ou encomenda</td>
+                      <td>Acabamento</td>
+                      <td>Esmalte preto fosco / verniz</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
 
-              <p class="card-note">
-                💡 Projeto enviado por WhatsApp ou e-mail com croqui e medidas. Produção em até 15 dias úteis.
-              </p>
-
-              <a
-                href="https://wa.me/5514998278402?text=Olá!%20Tenho%20interesse%20em%20uma%20Mesa%20%2F%20Estrutura%20Sob%20Medida.%20Posso%20enviar%20as%20medidas%20e%20receber%20um%20orçamento%3F"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-whatsapp"
-                aria-label="Solicitar orçamento para Mesa Estrutura Sob Medida via WhatsApp"
-              >
-                <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.874L.057 23.999l6.305-1.654A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-5.058-1.407l-.362-.216-3.743.981.999-3.651-.237-.374A9.796 9.796 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
-                Orçar via WhatsApp
-              </a>
+              <div class="card-actions-row">
+                <button
+                  class="btn btn-add-quote"
+                  onclick="toggleQuoteItem('mesa-estrutura', 'Mesa / Estrutura Sob Medida', '140 x 80 x 75 cm', this)"
+                >
+                  + Adicionar à Cotação
+                </button>
+                <a
+                  href="https://wa.me/5514998278402?text=Olá!%20Tenho%20interesse%20em%20uma%20Mesa%20%2F%20Estrutura%20Sob%20Medida.%20Posso%20enviar%20as%20medidas%20para%20orçamento%3F"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-whatsapp btn-sm"
+                  aria-label="Orçar Mesa Estrutura via WhatsApp"
+                >
+                  Orçar
+                </a>
+              </div>
             </div>
           </article>
 
           <!-- ─── CARD 4: Grade / Portão Artístico ─── -->
-          <article class="product-card" role="listitem" aria-label="Grade e Portão Artístico em Ferro">
+          <article
+            class="product-card"
+            data-category="portoes"
+            data-id="grade-portao"
+            data-title="Grade &amp; Portão Artístico em Ferro"
+            data-measure="Vão sob medida"
+            role="listitem"
+            aria-label="Grade e Portão Artístico em Ferro"
+          >
             <div class="card-image-wrap">
-              <!--
-                INSTRUÇÃO: Substitua pela tag <img> com a foto real.
-                Arquivo: ./assets/catalog/grade-portao.jpg
-              -->
               <div class="card-image-placeholder" aria-label="Aguardando foto: Grade e Portão Artístico em Ferro">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M18 3v18M6 3v18M3 12h18M3 7h18M3 17h18"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 3v18M6 3v18M3 12h18M3 7h18M3 17h18"/></svg>
                 <span>Grade / Portão Artístico</span>
-                <span style="font-size:0.65rem;opacity:.6">→ assets/catalog/grade-portao.jpg</span>
+                <span style="font-size:0.65rem;opacity:.6">assets/catalog/grade-portao.jpg</span>
+              </div>
+              <span class="card-badge">Alta Segurança</span>
+              <div class="card-spec-tags">
+                <span class="spec-tag">Barra Ø 12 mm</span>
+                <span class="spec-tag">Chata 1" x 3/16"</span>
+                <span class="spec-tag">Anticorrosivo Epóxi</span>
               </div>
             </div>
 
             <div class="card-body">
-              <span class="card-category">Grade · Portão · Segurança</span>
-              <h3 class="card-title">Grade / Portão Artístico em Ferro</h3>
+              <div class="card-header-meta">
+                <span class="card-category">Portão · Grade · Fachada</span>
+              </div>
+              <h3 class="card-title">Grade &amp; Portão Artístico</h3>
 
               <p class="card-desc">
-                Grades e portões em barra chata ou redonda de ferro forjado com desenhos
-                personalizados, arabescos ou linhas retas. Soldagem elétrica de alta
-                penetração, lixamento fino e pintura esmalte anticorrosivo + verniz
-                martelado. Ideal para janelas, portas, garagens e varandas.
+                Fechamentos em barra chata ou redonda forjada com desenhos geométricos contemporâneos ou
+                arabescos clássicos. Soldagem de alta penetração, desengraxe, fosfatização e esmalte protetivo
+                para resistir a intempéries sol e chuva contínua.
               </p>
 
-              <div class="measures-block" role="region" aria-label="Medidas da Grade e Portão Artístico">
-                <div class="measures-title">Medidas de Referência</div>
-                <table class="measures-table" aria-label="Especificações técnicas">
+              <div class="measures-block">
+                <div class="measures-title">
+                  <span>Especificações Técnicas</span>
+                  <span>Fabricação por Vão</span>
+                </div>
+                <table class="measures-table">
                   <tbody>
                     <tr>
-                      <td>Largura</td>
-                      <td>Sob medida</td>
-                    </tr>
-                    <tr>
-                      <td>Altura</td>
-                      <td>Sob medida</td>
+                      <td>Largura / Altura</td>
+                      <td>100% sob medida</td>
                     </tr>
                     <tr>
                       <td>Barra vertical</td>
-                      <td>Ø12 mm (padrão) / Ø16 mm</td>
+                      <td>Ø 12 mm ou Ø 16 mm</td>
                     </tr>
                     <tr>
                       <td>Barra horizontal</td>
@@ -453,209 +699,229 @@
                     </tr>
                     <tr>
                       <td>Espaçamento</td>
-                      <td>12 / 15 / 20 cm (a definir)</td>
-                    </tr>
-                    <tr>
-                      <td>Pintura</td>
-                      <td>Anticorrosivo + esmalte</td>
+                      <td>12 cm (padrão segurança)</td>
                     </tr>
                     <tr>
                       <td>Montagem</td>
-                      <td>Inclusa (Bauru/SP e região)</td>
+                      <td>Disponível Bauru e região</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
 
-              <p class="card-note">
-                💡 Envie a medida da abertura e o estilo desejado para croqui personalizado.
-              </p>
-
-              <a
-                href="https://wa.me/5514998278402?text=Olá!%20Gostaria%20de%20orçar%20uma%20Grade%20%2F%20Portão%20Artístico.%20Posso%20enviar%20as%20medidas%3F"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-whatsapp"
-                aria-label="Solicitar orçamento para Grade e Portão Artístico via WhatsApp"
-              >
-                <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.874L.057 23.999l6.305-1.654A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-5.058-1.407l-.362-.216-3.743.981.999-3.651-.237-.374A9.796 9.796 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
-                Orçar via WhatsApp
-              </a>
+              <div class="card-actions-row">
+                <button
+                  class="btn btn-add-quote"
+                  onclick="toggleQuoteItem('grade-portao', 'Grade & Portão Artístico', 'Vão sob medida', this)"
+                >
+                  + Adicionar à Cotação
+                </button>
+                <a
+                  href="https://wa.me/5514998278402?text=Olá!%20Gostaria%20de%20orçar%20uma%20Grade%20%2F%20Portão%20Artístico.%20Posso%20enviar%20as%20medidas%3F"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-whatsapp btn-sm"
+                  aria-label="Orçar Grade ou Portão via WhatsApp"
+                >
+                  Orçar
+                </a>
+              </div>
             </div>
           </article>
 
-          <!-- ─── CARD 5: Escada / Corrimão ─── -->
-          <article class="product-card" role="listitem" aria-label="Escada e Corrimão Industrial">
+          <!-- ─── CARD 5: Escada / Corrimão Industrial ─── -->
+          <article
+            class="product-card"
+            data-category="estruturas"
+            data-id="escada-corrimao"
+            data-title="Escada &amp; Corrimão Industrial"
+            data-measure="Vão e inclinação customizados"
+            role="listitem"
+            aria-label="Escada e Corrimão Industrial"
+          >
             <div class="card-image-wrap">
-              <!--
-                INSTRUÇÃO: Substitua pela tag <img> com a foto real.
-                Arquivo: ./assets/catalog/escada-corrimao.jpg
-              -->
               <div class="card-image-placeholder" aria-label="Aguardando foto: Escada e Corrimão Industrial">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 20h4v-4h4v-4h4v-4h4V4"/><path d="M3 20L20 3"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 20h4v-4h4v-4h4v-4h4V4"/><path d="M3 20L20 3"/></svg>
                 <span>Escada / Corrimão Industrial</span>
-                <span style="font-size:0.65rem;opacity:.6">→ assets/catalog/escada-corrimao.jpg</span>
+                <span style="font-size:0.65rem;opacity:.6">assets/catalog/escada-corrimao.jpg</span>
+              </div>
+              <span class="card-badge">Norma NBR 9077</span>
+              <div class="card-spec-tags">
+                <span class="spec-tag">Chapa Xadrez 3 mm</span>
+                <span class="spec-tag">Tubo Ø 1¼" - 1½"</span>
+                <span class="spec-tag">Mezanino &amp; Galpão</span>
               </div>
             </div>
 
             <div class="card-body">
-              <span class="card-category">Escada · Corrimão · Mezanino</span>
-              <h3 class="card-title">Escada / Corrimão Industrial</h3>
+              <div class="card-header-meta">
+                <span class="card-category">Escada · Corrimão · Mezanino</span>
+              </div>
+              <h3 class="card-title">Escada &amp; Corrimão Industrial</h3>
 
               <p class="card-desc">
-                Estruturas de escada em tubo quadrado ou redondo com degraus em chapa
-                xadrez antiderrapante ou madeira. Corrimão com diâmetro de 1&frac14;" ou
-                1&frac12;" em tubo galvanizado ou aço carbono. Projeto adaptado a qualquer
-                vão, inclinação e estilo — do industrial rústico ao minimalista contemporâneo.
+                Estrutura de sustentação em tubos pesados e perfis U/I. Degraus em chapa xadrez
+                antiderrapante ou bases para madeira maciça. Corrimãos ergonômicos e guarda-corpos
+                rigorosamente calculados para segurança coletiva em residências, escritórios e barracões.
               </p>
 
-              <div class="measures-block" role="region" aria-label="Medidas da Escada e Corrimão">
-                <div class="measures-title">Medidas de Referência</div>
-                <table class="measures-table" aria-label="Especificações técnicas">
+              <div class="measures-block">
+                <div class="measures-title">
+                  <span>Parâmetros de Projeto</span>
+                  <span>Cálculo por Vão</span>
+                </div>
+                <table class="measures-table">
                   <tbody>
                     <tr>
                       <td>Largura mínima</td>
-                      <td>60 cm</td>
+                      <td>60 cm / 80 cm / 100 cm</td>
                     </tr>
                     <tr>
                       <td>Espelho do degrau</td>
-                      <td>17 – 20 cm (NBR 9077)</td>
+                      <td>17 – 19 cm (ergonômico)</td>
                     </tr>
                     <tr>
                       <td>Piso do degrau</td>
-                      <td>25 – 30 cm</td>
+                      <td>25 – 30 cm antiderrapante</td>
                     </tr>
                     <tr>
                       <td>Corrimão</td>
-                      <td>Tubo Ø 1¼" ou 1½"</td>
+                      <td>Tubo Ø 1¼" ou Ø 1½"</td>
                     </tr>
                     <tr>
-                      <td>Chapa degrau</td>
-                      <td>Xadrez 3 mm ou madeira</td>
-                    </tr>
-                    <tr>
-                      <td>Pintura</td>
-                      <td>Anticorrosivo + esmalte</td>
-                    </tr>
-                    <tr>
-                      <td>Projeto</td>
-                      <td>100% personalizado</td>
+                      <td>Carga estática</td>
+                      <td>Projetado para alta circulação</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
 
-              <p class="card-note">
-                💡 Envie o vão e a diferença de nível para receber uma proposta técnica.
-              </p>
-
-              <a
-                href="https://wa.me/5514998278402?text=Olá!%20Preciso%20de%20orçamento%20para%20Escada%20%2F%20Corrimão%20Industrial.%20Pode%20me%20ajudar%3F"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-whatsapp"
-                aria-label="Solicitar orçamento para Escada e Corrimão Industrial via WhatsApp"
-              >
-                <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.874L.057 23.999l6.305-1.654A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-5.058-1.407l-.362-.216-3.743.981.999-3.651-.237-.374A9.796 9.796 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
-                Orçar via WhatsApp
-              </a>
+              <div class="card-actions-row">
+                <button
+                  class="btn btn-add-quote"
+                  onclick="toggleQuoteItem('escada-corrimao', 'Escada & Corrimão Industrial', 'Vão customizado', this)"
+                >
+                  + Adicionar à Cotação
+                </button>
+                <a
+                  href="https://wa.me/5514998278402?text=Olá!%20Preciso%20de%20orçamento%20para%20Escada%20%2F%20Corrimão%20Industrial.%20Pode%20me%20ajudar%3F"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-whatsapp btn-sm"
+                  aria-label="Orçar Escada ou Corrimão via WhatsApp"
+                >
+                  Orçar
+                </a>
+              </div>
             </div>
           </article>
 
           <!-- ─── CARD 6: Suporte Mural para TV / Painel ─── -->
-          <article class="product-card" role="listitem" aria-label="Suporte Mural para TV e Painel">
+          <article
+            class="product-card"
+            data-category="especiais"
+            data-id="suporte-tv-painel"
+            data-title="Suporte Mural para TV &amp; Painel"
+            data-measure="Até 85 polegadas / 80 kg"
+            role="listitem"
+            aria-label="Suporte Mural para TV e Painel"
+          >
             <div class="card-image-wrap">
-              <!--
-                INSTRUÇÃO: Substitua pela tag <img> com a foto real.
-                Arquivo: ./assets/catalog/suporte-tv-painel.jpg
-              -->
               <div class="card-image-placeholder" aria-label="Aguardando foto: Suporte Mural para TV e Painel">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
                 <span>Suporte Mural para TV / Painel</span>
-                <span style="font-size:0.65rem;opacity:.6">→ assets/catalog/suporte-tv-painel.jpg</span>
+                <span style="font-size:0.65rem;opacity:.6">assets/catalog/suporte-tv-painel.jpg</span>
+              </div>
+              <span class="card-badge">Carga Pesada</span>
+              <div class="card-spec-tags">
+                <span class="spec-tag">Barra 2" x 1/4"</span>
+                <span class="spec-tag">Cantoneira 1½"</span>
+                <span class="spec-tag">Alvenaria &amp; Drywall</span>
               </div>
             </div>
 
             <div class="card-body">
-              <span class="card-category">Suporte · Mural · TV</span>
-              <h3 class="card-title">Suporte Mural para TV / Painel</h3>
+              <div class="card-header-meta">
+                <span class="card-category">Suporte Mural · TV · Painel</span>
+              </div>
+              <h3 class="card-title">Suporte Mural para TV &amp; Painel</h3>
 
               <p class="card-desc">
-                Painel e suporte mural em barra chata ou tubo de aço com acabamento polido
-                ou fosco. Permite posicionamento de TV, moldura decorativa ou painel
-                ripado em madeira. Inclui reforço traseiro para fixação em alvenaria
-                ou drywall com sistema de haste e placa expansível.
+                Estrutura de ancoragem pesada para suportar televisores de grandes dimensões (até 85"),
+                painéis ripados de marcenaria ou prateleiras flutuantes em balanço. Fabricado com travessas
+                de chapa grossa e furos oblongos que facilitam o nivelamento milimétrico na parede.
               </p>
 
-              <div class="measures-block" role="region" aria-label="Medidas do Suporte Mural para TV">
-                <div class="measures-title">Medidas de Referência</div>
-                <table class="measures-table" aria-label="Especificações técnicas">
+              <div class="measures-block">
+                <div class="measures-title">
+                  <span>Capacidade Estrutural</span>
+                  <span>Carga: até 80kg</span>
+                </div>
+                <table class="measures-table">
                   <tbody>
                     <tr>
-                      <td>Largura total do painel</td>
-                      <td>Sob medida</td>
+                      <td>Compatibilidade TV</td>
+                      <td>Telas de 50" a 85"</td>
                     </tr>
                     <tr>
-                      <td>Altura do painel</td>
-                      <td>Sob medida</td>
-                    </tr>
-                    <tr>
-                      <td>Barra horizontal</td>
-                      <td>Chata 2" × ¼"</td>
+                      <td>Barra principal</td>
+                      <td>Chata 2" × ¼" (aço 1020)</td>
                     </tr>
                     <tr>
                       <td>Reforço traseiro</td>
                       <td>Cantoneira 1½" × ⅛"</td>
                     </tr>
                     <tr>
-                      <td>TV compatível</td>
-                      <td>Até 85" / 80 kg</td>
-                    </tr>
-                    <tr>
                       <td>Acabamento</td>
-                      <td>Fosco / Polido / Pintado</td>
+                      <td>Esmalte preto acetinado</td>
                     </tr>
                     <tr>
-                      <td>Montagem</td>
-                      <td>Inclusa na região</td>
+                      <td>Fixação</td>
+                      <td>Chumbadores / buchas especiais</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
 
-              <p class="card-note">
-                💡 Informe o tamanho da TV e da parede para cálculo de resistência.
-              </p>
-
-              <a
-                href="https://wa.me/5514998278402?text=Olá!%20Tenho%20interesse%20no%20Suporte%20Mural%20para%20TV%20%2F%20Painel.%20Pode%20me%20passar%20um%20orçamento%3F"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-whatsapp"
-                aria-label="Solicitar orçamento para Suporte Mural para TV via WhatsApp"
-              >
-                <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.874L.057 23.999l6.305-1.654A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-5.058-1.407l-.362-.216-3.743.981.999-3.651-.237-.374A9.796 9.796 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
-                Orçar via WhatsApp
-              </a>
+              <div class="card-actions-row">
+                <button
+                  class="btn btn-add-quote"
+                  onclick="toggleQuoteItem('suporte-tv-painel', 'Suporte Mural para TV & Painel', 'Até 85 pol / 80kg', this)"
+                >
+                  + Adicionar à Cotação
+                </button>
+                <a
+                  href="https://wa.me/5514998278402?text=Olá!%20Tenho%20interesse%20no%20Suporte%20Mural%20para%20TV%20%2F%20Painel.%20Pode%20me%20passar%20um%20orçamento%3F"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-whatsapp btn-sm"
+                  aria-label="Orçar Suporte de TV via WhatsApp"
+                >
+                  Orçar
+                </a>
+              </div>
             </div>
           </article>
 
-        </div><!-- /.catalog-grid -->
+        </div>
 
-        <!-- CTA ao final do catálogo -->
-        <div style="margin-top:var(--space-12);text-align:center;">
-          <p style="color:var(--color-text-mid);margin-bottom:var(--space-4);font-size:var(--text-lg);">
-            Não encontrou o que procurava? Fabricamos <strong>qualquer projeto sob medida</strong>.
+        <!-- Banner de Projeto Personalizado sob medida -->
+        <div style="margin-top:var(--space-12);padding:var(--space-8);background:var(--color-steel-850);border:1px solid var(--color-steel-700);border-radius:var(--radius-lg);text-align:center;">
+          <h3 style="font-size:var(--text-xl);color:var(--color-steel-white);margin-bottom:var(--space-2);">
+            Tem um croqui, projeto de arquiteto ou medidas especiais?
+          </h3>
+          <p style="color:var(--color-steel-400);margin-bottom:var(--space-6);margin-inline:auto;">
+            Fabricamos qualquer peça conforme seu desenho. Envie fotos do local ou especificações técnicas
+            para receber uma análise de engenharia e orçamento sem compromisso.
           </p>
           <a
-            href="https://wa.me/5514998278402?text=Olá!%20Preciso%20de%20uma%20peça%20personalizada%20que%20não%20está%20no%20catálogo.%20Posso%20descrever%20o%20que%20preciso%3F"
+            href="https://wa.me/5514998278402?text=Olá!%20Tenho%20um%20projeto%20personalizado%20com%20croqui%2Fmedidas%20e%20gostaria%20de%20uma%20análise%20técnica."
             target="_blank"
             rel="noopener noreferrer"
             class="btn btn-primary btn-lg"
-            aria-label="Enviar projeto personalizado via WhatsApp"
           >
-            <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.874L.057 23.999l6.305-1.654A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-5.058-1.407l-.362-.216-3.743.981.999-3.651-.237-.374A9.796 9.796 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
-            Enviar Meu Projeto
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            Enviar Meu Projeto para Avaliação
           </a>
         </div>
 
@@ -663,229 +929,370 @@
     </section>
 
     <!-- ═══════════════════════════════════════════
-         SOBRE A ARTESEMFERRO
+         SEÇÃO: COMO SOLICITAR ORÇAMENTO? (Modelo 3 Passos Imesul)
     ═══════════════════════════════════════════ -->
-    <section id="sobre" aria-labelledby="titulo-sobre">
-      <div class="container" style="position:relative;z-index:1;">
+    <section id="como-orcar" aria-labelledby="titulo-como-orcar">
+      <div class="container">
+        
+        <div class="section-badge">
+          <span class="status-dot"></span>
+          <span>Processo Ágil</span>
+        </div>
+        <h2 class="section-title" id="titulo-como-orcar">Como solicitar seu orçamento?</h2>
+        <p class="section-desc">
+          Nosso processo comercial é desenhado para rapidez e precisão técnica. Sem burocracia:
+        </p>
 
-        <div class="sobre-grid">
-          <div class="sobre-content">
-            <p class="section-label" style="color:var(--color-copper);">Nossa História</p>
-            <h2 class="section-title" id="titulo-sobre">Artesanato em ferro, precisão em cada milímetro</h2>
+        <div class="steps-grid">
 
-            <p class="sobre-desc">
-              A ArtesEmFerro nasceu da paixão pela metalurgia artística e pelo desejo de
-              entregar peças que combinam resistência industrial com beleza artesanal.
-              Cada projeto começa num papel e termina em ferro, com medidas exatas e
-              acabamento que respeita a identidade do cliente.
+          <!-- Passo 1 -->
+          <div class="step-card">
+            <span class="step-number">01</span>
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            </div>
+            <h3 class="step-title">Escolha o Material</h3>
+            <p class="step-desc">
+              Navegue pelo catálogo e adicione os itens à cotação com o botão <strong>"+ Adicionar"</strong>,
+              ou prepare o croqui/medidas da peça que você planeja executar.
             </p>
-
-            <ul class="sobre-features" role="list" aria-label="Diferenciais da ArtesEmFerro">
-
-              <li class="sobre-feature">
-                <div class="feature-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M15.5 9H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5S16.33 9 15.5 9z"/><path d="M10 9.5c0-.83-.67-1.5-1.5-1.5h-5c-.83 0-1.5.67-1.5 1.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"/><path d="M8.5 15H10v-1.5c0-.83-.67-1.5-1.5-1.5S7 12.67 7 13.5 7.67 15 8.5 15z"/></svg>
-                </div>
-                <div class="feature-text">
-                  <h4>Fabricação 100% Sob Medida</h4>
-                  <p>Nenhuma peça é igual. Cada projeto é desenvolvido conforme as medidas e especificações do cliente, sem catálogos fixos limitantes.</p>
-                </div>
-              </li>
-
-              <li class="sobre-feature">
-                <div class="feature-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-                </div>
-                <div class="feature-text">
-                  <h4>Precisão Técnica e Prazos Cumpridos</h4>
-                  <p>Soldagem de precisão, acabamentos conferidos e entrega no prazo combinado. Comunicação direta do início ao fim do projeto.</p>
-                </div>
-              </li>
-
-              <li class="sobre-feature">
-                <div class="feature-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                </div>
-                <div class="feature-text">
-                  <h4>Durabilidade e Materiais de Qualidade</h4>
-                  <p>Usamos apenas aço e ferro de procedência certificada, com primers anticorrosivos e acabamentos que prolongam a vida útil das peças.</p>
-                </div>
-              </li>
-
-              <li class="sobre-feature">
-                <div class="feature-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-                </div>
-                <div class="feature-text">
-                  <h4>Atendimento Personalizado e Humano</h4>
-                  <p>Atendimento direto via WhatsApp, sem intermediários. Tire dúvidas, ajuste o projeto e acompanhe a produção em tempo real.</p>
-                </div>
-              </li>
-
-            </ul>
-
-            <a
-              href="https://wa.me/5514998278402?text=Olá!%20Gostaria%20de%20conversar%20sobre%20um%20projeto%20personalizado."
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-primary"
-              aria-label="Falar com a ArtesEmFerro via WhatsApp"
-            >
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.874L.057 23.999l6.305-1.654A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-5.058-1.407l-.362-.216-3.743.981.999-3.651-.237-.374A9.796 9.796 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
-              Falar Conosco
-            </a>
           </div>
 
-          <!-- Imagem lateral -->
-          <div class="sobre-visual" aria-hidden="true">
-            <div class="sobre-img-wrap">
-              <!--
-                INSTRUÇÃO: Coloque aqui a foto da oficina ou de uma peça em produção.
-                Arquivo: ./assets/sobre-oficina.jpg
-                Exemplo:
-                <img src="./assets/sobre-oficina.jpg" alt="Oficina ArtesEmFerro — peças sendo fabricadas" loading="lazy" />
-              -->
-              <div class="sobre-img-placeholder">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
-                Foto da oficina<br>
-                <span style="font-size:0.65rem;opacity:.5">→ assets/sobre-oficina.jpg</span>
-              </div>
+          <!-- Passo 2 -->
+          <div class="step-card">
+            <span class="step-number">02</span>
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
             </div>
-            <div class="sobre-badge" aria-hidden="true">
-              <div class="sobre-badge-value">+5</div>
-              <div class="sobre-badge-label">anos de<br>experiência</div>
+            <h3 class="step-title">Confira as Opções</h3>
+            <p class="step-desc">
+              Revise as medidas do vão, perfil do tubo, espessura da chapa e tipo de pintura
+              (primer anticorrosivo, esmalte sintético ou eletrostática a pó).
+            </p>
+          </div>
+
+          <!-- Passo 3 -->
+          <div class="step-card">
+            <span class="step-number">03</span>
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
             </div>
+            <h3 class="step-title">Envie a Solicitação</h3>
+            <p class="step-desc">
+              Abra a bandeja de orçamento e clique em <strong>"Finalizar no WhatsApp"</strong>. Nossa equipe
+              técnica confirma disponibilidade, prazo de fabricação e proposta completa.
+            </p>
           </div>
 
         </div>
+
       </div>
     </section>
 
     <!-- ═══════════════════════════════════════════
-         CONTATO
+         SEÇÃO: DIFERENCIAIS TÉCNICOS & ENGENHARIA
+    ═══════════════════════════════════════════ -->
+    <section id="diferenciais" aria-labelledby="titulo-diferenciais">
+      <div class="container">
+
+        <div class="section-badge">
+          <span class="status-dot"></span>
+          <span>Padrão de Qualidade</span>
+        </div>
+        <h2 class="section-title" id="titulo-diferenciais">Atendimento para obra, serralheria e indústria</h2>
+        <p class="section-desc">
+          Entregamos confiança em cada cordão de solda, com rigor de acabamento e pontualidade de cronograma.
+        </p>
+
+        <div class="diferenciais-grid">
+
+          <div class="dif-card">
+            <div class="dif-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <h3>Atendimento Técnico Direto</h3>
+            <p>Você conversa diretamente com profissionais de metalurgia que entendem de carga, ancoragem e solda técnica.</p>
+          </div>
+
+          <div class="dif-card">
+            <div class="dif-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>Gabarito Milimétrico</h3>
+            <p>Cortes em esquadro preciso e conformação mecânica garantem encaixes perfeitos na montagem em obra.</p>
+          </div>
+
+          <div class="dif-card">
+            <div class="dif-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Tratamento Anticorrosivo</h3>
+            <p>Fosfatização e aplicação de primers inibidores de ferrugem para garantir longevidade de décadas em ambientes externos.</p>
+          </div>
+
+          <div class="dif-card">
+            <div class="dif-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+            </div>
+            <h3>Agilidade para Orçamentos</h3>
+            <p>Retorno de orçamentos técnicos com descrição clara de materiais e prazos transparentes de produção.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SEÇÃO: SOBRE A OFICINA
+    ═══════════════════════════════════════════ -->
+    <section id="sobre" aria-labelledby="titulo-sobre">
+      <div class="container">
+
+        <div class="sobre-grid">
+          <div>
+            <div class="section-badge">
+              <span class="status-dot"></span>
+              <span>Estrutura &amp; Oficina</span>
+            </div>
+            <h2 class="section-title" id="titulo-sobre">Tradição metalúrgica com precisão moderna</h2>
+
+            <p class="section-desc">
+              A <strong>ArtesEmFerro</strong> une a robustez do aço carbono certificado à sensibilidade do acabamento
+              artesanal. Cada peça que sai da nossa bancada passa por rigoroso controle dimensional, conferência de
+              soldas e proteção de superfície.
+            </p>
+
+            <ul class="sobre-features">
+              <li class="sobre-feature">
+                <div class="feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="feature-text">
+                  <h4>Matéria-Prima Certificada</h4>
+                  <p>Trabalhamos exclusivamente com tubos de parede industrial, chapas lisas e xadrez de alta qualidade.</p>
+                </div>
+              </li>
+
+              <li class="sobre-feature">
+                <div class="feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="feature-text">
+                  <h4>Pós-Venda e Suporte Regional</h4>
+                  <p>Atendimento contínuo para Bauru, Jaú, Botucatu, Marília e todo o interior de São Paulo.</p>
+                </div>
+              </li>
+            </ul>
+
+            <a
+              href="https://wa.me/5514998278402?text=Olá!%20Gostaria%20de%20conversar%20sobre%20uma%20encomenda%20com%20a%20equipe%20ArtesEmFerro."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary"
+            >
+              Falar com o Serralheiro Responsável
+            </a>
+          </div>
+
+          <!-- Imagem da Oficina com Badge -->
+          <div class="sobre-visual">
+            <div class="sobre-img-wrap">
+              <div class="sobre-img-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+                <span>Oficina ArtesEmFerro — Soldagem e Fabricação</span>
+                <span style="font-size:0.65rem;opacity:.5">assets/sobre-oficina.jpg</span>
+              </div>
+            </div>
+            <div class="sobre-badge">
+              <div class="sobre-badge-value">+5</div>
+              <div class="sobre-badge-label">Anos de atuação<br>regional</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SEÇÃO: CONTATO & CANAIS DE ATENDIMENTO
     ═══════════════════════════════════════════ -->
     <section id="contato" aria-labelledby="titulo-contato">
       <div class="container">
-        <p class="section-label">Contato</p>
-        <h2 class="section-title" id="titulo-contato">Fale Conosco</h2>
+
+        <div class="section-badge">
+          <span class="status-dot"></span>
+          <span>Canais Oficiais</span>
+        </div>
+        <h2 class="section-title" id="titulo-contato">Fale com a nossa equipe comercial</h2>
         <p class="section-desc">
-          Atendemos por WhatsApp e e-mail. Envie sua ideia, medidas ou dúvidas —
-          respondemos com rapidez e atenção.
+          Envie sua lista de medidas, fotos do ambiente ou croquis. Retornamos prontamente com proposta técnica.
         </p>
 
         <div class="contact-grid">
 
-          <!-- WhatsApp -->
+          <!-- Card WhatsApp -->
           <div class="contact-card">
-            <div class="contact-icon" aria-hidden="true">
+            <div class="contact-icon">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.874L.057 23.999l6.305-1.654A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-5.058-1.407l-.362-.216-3.743.981.999-3.651-.237-.374A9.796 9.796 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
             </div>
-            <h3>WhatsApp</h3>
-            <p>Canal principal de atendimento. Envie fotos, medidas e descrições do projeto para um orçamento rápido e preciso.</p>
+            <h3>WhatsApp Direto</h3>
+            <p>Envie fotos, mensagens de áudio, arquivos PDF e especificações para retorno rápido.</p>
             <a
-              href="https://wa.me/5514998278402?text=Olá!%20Vim%20pelo%20site%20ArtesEmFerro%20e%20gostaria%20de%20solicitar%20um%20orçamento."
+              href="https://wa.me/5514998278402?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento."
               target="_blank"
               rel="noopener noreferrer"
               class="contact-link"
-              aria-label="Abrir conversa no WhatsApp com ArtesEmFerro"
             >
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.874L.057 23.999l6.305-1.654A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-5.058-1.407l-.362-.216-3.743.981.999-3.651-.237-.374A9.796 9.796 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
               (14) 99827-8402
             </a>
             <a
-              href="https://wa.me/5514998278402?text=Olá!%20Vim%20pelo%20site%20ArtesEmFerro%20e%20gostaria%20de%20solicitar%20um%20orçamento."
+              href="https://wa.me/5514998278402?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento."
               target="_blank"
               rel="noopener noreferrer"
               class="btn btn-whatsapp"
-              aria-label="Iniciar conversa no WhatsApp para solicitar orçamento"
             >
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.874L.057 23.999l6.305-1.654A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-5.058-1.407l-.362-.216-3.743.981.999-3.651-.237-.374A9.796 9.796 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
               Iniciar Conversa no WhatsApp
             </a>
           </div>
 
-          <!-- E-mail -->
+          <!-- Card E-mail -->
           <div class="contact-card">
-            <div class="contact-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </div>
-            <h3>E-mail</h3>
-            <p>Prefere comunicação por e-mail? Envie seu projeto, referências de imagem e as medidas desejadas que retornamos em até 24h.</p>
-            <a
-              href="mailto:geovaneparedes02@gmail.com?subject=Orçamento%20ArtesEmFerro&body=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento."
-              class="contact-link"
-              aria-label="Enviar e-mail para geovaneparedes02@gmail.com"
-            >
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <h3>E-mail Corporativo</h3>
+            <p>Canal formal para recebimento de memoriais descritivos, plantas arquitetônicas e cotações para empresas.</p>
+            <a href="mailto:geovaneparedes02@gmail.com" class="contact-link">
               geovaneparedes02@gmail.com
             </a>
-            <div style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
-              <a
-                href="mailto:geovaneparedes02@gmail.com?subject=Orçamento%20ArtesEmFerro&body=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento."
-                class="btn btn-primary btn-sm"
-                aria-label="Abrir cliente de e-mail para contato"
-              >
-                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;">
+              <a href="mailto:geovaneparedes02@gmail.com?subject=Orçamento%20ArtesEmFerro" class="btn btn-secondary btn-sm">
                 Abrir E-mail
               </a>
-              <button
-                class="copy-btn"
-                onclick="copyToClipboard('geovaneparedes02@gmail.com', this)"
-                aria-label="Copiar endereço de e-mail para a área de transferência"
-              >
-                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-                Copiar e-mail
+              <button class="copy-btn" onclick="copyEmail('geovaneparedes02@gmail.com', this)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copiar endereço
               </button>
             </div>
           </div>
 
         </div>
+
       </div>
     </section>
 
   </main>
 
   <!-- ═══════════════════════════════════════════
-       FOOTER
+       BANDEJA FLUTUANTE DE ORÇAMENTO (Drawer Modal)
+  ═══════════════════════════════════════════ -->
+  <div class="quote-modal-overlay" id="quote-drawer-overlay" aria-hidden="true">
+    <aside class="quote-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+      <div class="drawer-header">
+        <h3 id="drawer-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          Sua Lista de Cotação
+        </h3>
+        <button class="drawer-close-btn" id="close-quote-drawer" aria-label="Fechar lista de cotação">
+          ✕
+        </button>
+      </div>
+
+      <div class="drawer-body" id="drawer-items-list">
+        <!-- Itens inseridos via JavaScript -->
+      </div>
+
+      <div class="drawer-footer">
+        <label for="quote-customer-notes" style="font-family:var(--font-mono);font-size:var(--text-2xs);color:var(--color-steel-400);text-transform:uppercase;">
+          Observações adicionais (medidas personalizadas, acabamento...):
+        </label>
+        <textarea
+          id="quote-customer-notes"
+          class="drawer-notes-input"
+          placeholder="Ex: Gostaria da prateleira na cor branca e suporte de estante com 200cm..."
+        ></textarea>
+        
+        <button class="btn btn-whatsapp btn-lg" onclick="sendQuoteWhatsApp()" id="btn-send-quote">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.874L.057 23.999l6.305-1.654A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-5.058-1.407l-.362-.216-3.743.981.999-3.651-.237-.374A9.796 9.796 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+          Finalizar Cotação no WhatsApp
+        </button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       BOTÃO FLUTUANTE WHATSAPP
+  ═══════════════════════════════════════════ -->
+  <a
+    href="https://wa.me/5514998278402?text=Olá!%20Vim%20pelo%20site%20da%20ArtesEmFerro%20e%20gostaria%20de%20um%20orçamento."
+    target="_blank"
+    rel="noopener noreferrer"
+    class="floating-whatsapp-btn"
+    aria-label="Abrir conversa no WhatsApp"
+  >
+    <span class="floating-whatsapp-tooltip">Atendimento Rápido</span>
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.874L.057 23.999l6.305-1.654A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-5.058-1.407l-.362-.216-3.743.981.999-3.651-.237-.374A9.796 9.796 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+  </a>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER INDUSTRIAL MODERNO (Estilo Imesul)
   ═══════════════════════════════════════════ -->
   <footer id="site-footer" role="contentinfo">
     <div class="container">
 
       <div class="footer-top">
 
-        <!-- Brand -->
+        <!-- Marca e Missão -->
         <div class="footer-brand">
-          <a href="#inicio" class="site-logo" aria-label="ArtesEmFerro — voltar ao topo">
-            <img src="./assets/logo.jpg" alt="ArtesEmFerro — Serralheria Artística" class="site-logo-img" width="140" height="48" />
+          <a href="#hero" class="site-logo">
+            <img src="./assets/logo.jpg" alt="ArtesEmFerro" class="site-logo-img" width="140" height="42" />
           </a>
           <p class="footer-brand-desc">
-            Fabricação artesanal em ferro e aço sob medida. Precisão, resistência e acabamento em cada peça.
+            Serralheria industrial e artística sob medida. Estruturas, móveis e peças em aço carbono com
+            acabamento nobre e durabilidade superior.
           </p>
         </div>
 
-        <!-- Links -->
-        <nav class="footer-nav" aria-label="Links do rodapé">
+        <!-- Coluna: Navegação -->
+        <div class="footer-col">
           <h4>Navegação</h4>
           <ul>
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#catalogo">Catálogo e Medidas</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#contato">Contato</a></li>
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#aplicacoes">Aplicações</a></li>
+            <li><a href="#catalogo">Catálogo de Peças</a></li>
+            <li><a href="#como-orcar">Como Orçar</a></li>
+            <li><a href="#diferenciais">Diferenciais</a></li>
+            <li><a href="#sobre">Nossa Oficina</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna: Categorias -->
+        <div class="footer-col">
+          <h4>Linhas de Aço</h4>
+          <ul>
+            <li><a href="#catalogo" onclick="filterCatalog('moveis')">Mesas Industriais</a></li>
+            <li><a href="#catalogo" onclick="filterCatalog('suportes')">Prateleiras &amp; Estantes</a></li>
+            <li><a href="#catalogo" onclick="filterCatalog('portoes')">Grades &amp; Portões</a></li>
+            <li><a href="#catalogo" onclick="filterCatalog('estruturas')">Escadas &amp; Mezaninos</a></li>
             <li><a href="./politica-de-uso.html">Política de Uso</a></li>
           </ul>
-        </nav>
+        </div>
 
-        <!-- Contato rodapé -->
-        <div class="footer-contact">
-          <h4>Contato</h4>
-          <a href="mailto:geovaneparedes02@gmail.com" class="footer-contact-item" aria-label="Enviar e-mail para geovaneparedes02@gmail.com">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            geovaneparedes02@gmail.com
-          </a>
-          <a href="https://wa.me/5514998278402?text=Olá!%20Vim%20pelo%20site%20ArtesEmFerro." target="_blank" rel="noopener noreferrer" class="footer-contact-item" aria-label="Enviar mensagem WhatsApp para (14) 99827-8402">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.874L.057 23.999l6.305-1.654A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-5.058-1.407l-.362-.216-3.743.981.999-3.651-.237-.374A9.796 9.796 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+        <!-- Coluna: Contato Direto -->
+        <div class="footer-col">
+          <h4>Atendimento Técnico</h4>
+          <a href="https://wa.me/5514998278402" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.874L.057 23.999l6.305-1.654A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-5.058-1.407l-.362-.216-3.743.981.999-3.651-.237-.374A9.796 9.796 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
             (14) 99827-8402
           </a>
+          <a href="mailto:geovaneparedes02@gmail.com" class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            geovaneparedes02@gmail.com
+          </a>
+          <div style="font-size:var(--text-xs);color:var(--color-steel-400);margin-top:var(--space-2);line-height:1.5;">
+            Atendimento Bauru, Botucatu, Jaú, Marília e Interior de SP.
+          </div>
         </div>
 
       </div>
@@ -895,7 +1302,7 @@
           &copy; <span id="ano-atual"></span> ArtesEmFerro. Todos os direitos reservados.
         </p>
         <a href="./politica-de-uso.html" class="footer-policy-link">
-          Política de Uso e Encomendas
+          Termos de Encomenda &amp; Política de Uso
         </a>
       </div>
 
@@ -903,99 +1310,241 @@
   </footer>
 
   <!-- ═══════════════════════════════════════════
-       SCRIPTS
+       SCRIPTS: FILTROS DINÂMICOS, BUSCA E BANDEJA DE ORÇAMENTO
   ═══════════════════════════════════════════ -->
   <script>
-    // ── Ano atual no footer ──
+    // ── Ano dinâmico no footer ──
     document.getElementById('ano-atual').textContent = new Date().getFullYear();
 
-    // ── Header scroll shadow ──
+    // ── Header Scroll Blur Effect ──
     const header = document.getElementById('site-header');
-    const onScroll = () => {
-      header.classList.toggle('scrolled', window.scrollY > 10);
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
 
-    // ── Menu mobile ──
-    const toggle = document.getElementById('nav-toggle');
-    const nav    = document.getElementById('main-nav');
-    toggle.addEventListener('click', () => {
-      const expanded = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', String(!expanded));
-      toggle.setAttribute('aria-label', expanded ? 'Abrir menu de navegação' : 'Fechar menu de navegação');
-      nav.classList.toggle('open');
+    // ── Menu Mobile ──
+    const navToggle = document.getElementById('nav-toggle');
+    const mainNav = document.getElementById('main-nav');
+
+    navToggle.addEventListener('click', () => {
+      const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!isOpen));
+      mainNav.classList.toggle('open');
     });
 
-    // Fechar menu ao clicar em link (mobile)
-    nav.querySelectorAll('.nav-link').forEach(link => {
+    mainNav.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.setAttribute('aria-label', 'Abrir menu de navegação');
-        nav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        mainNav.classList.remove('open');
       });
     });
 
-    // Fechar menu ao clicar fora
-    document.addEventListener('click', (e) => {
-      if (!header.contains(e.target)) {
-        toggle.setAttribute('aria-expanded', 'false');
-        nav.classList.remove('open');
-      }
-    });
-
-    // ── Copiar para clipboard com toast ──
+    // ── Toast Feedback ──
     const toast = document.getElementById('toast');
-    let toastTimer;
-
+    let toastTimeout;
     function showToast(msg) {
       toast.textContent = msg;
       toast.classList.add('show');
-      clearTimeout(toastTimer);
-      toastTimer = setTimeout(() => toast.classList.remove('show'), 2800);
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => toast.classList.remove('show'), 2800);
     }
 
-    function copyToClipboard(text, btn) {
-      if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(text).then(() => {
-          showToast('✓ E-mail copiado!');
-          if (btn) {
-            const original = btn.innerHTML;
-            btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><polyline points="20 6 9 17 4 12"/></svg> Copiado!';
-            setTimeout(() => { btn.innerHTML = original; }, 2000);
-          }
-        });
+    function copyEmail(email, btn) {
+      navigator.clipboard.writeText(email).then(() => {
+        showToast('✓ E-mail copiado com sucesso!');
+        if (btn) {
+          const orig = btn.innerHTML;
+          btn.innerHTML = '✓ Copiado!';
+          setTimeout(() => { btn.innerHTML = orig; }, 2000);
+        }
+      }).catch(() => {
+        showToast('✓ ' + email);
+      });
+    }
+
+    // ── Sistema de Bandeja / Cesta de Orçamento (Quote Tray) ──
+    let quoteItems = [];
+
+    const drawerOverlay = document.getElementById('quote-drawer-overlay');
+    const openDrawerBtn = document.getElementById('open-quote-drawer');
+    const closeDrawerBtn = document.getElementById('close-quote-drawer');
+    const badgeCount = document.getElementById('quote-count-badge');
+    const drawerList = document.getElementById('drawer-items-list');
+
+    function updateQuoteUI() {
+      badgeCount.textContent = quoteItems.length;
+
+      // Atualiza botões nos cards
+      document.querySelectorAll('.btn-add-quote').forEach(btn => {
+        const card = btn.closest('.product-card');
+        if (!card) return;
+        const id = card.getAttribute('data-id');
+        const inQuote = quoteItems.some(item => item.id === id);
+        if (inQuote) {
+          btn.classList.add('added');
+          btn.innerHTML = '✓ Adicionado';
+        } else {
+          btn.classList.remove('added');
+          btn.innerHTML = '+ Adicionar à Cotação';
+        }
+      });
+
+      // Renderiza itens no drawer
+      if (quoteItems.length === 0) {
+        drawerList.innerHTML = `
+          <div class="drawer-empty-state">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            <h4>Sua lista está vazia</h4>
+            <p style="font-size:var(--text-xs);margin-top:6px;">Navegue pelo catálogo e clique em "+ Adicionar à Cotação" para montar sua solicitação.</p>
+          </div>
+        `;
       } else {
-        // Fallback
-        const el = document.createElement('textarea');
-        el.value = text;
-        el.style.cssText = 'position:fixed;top:-999px;left:-999px;';
-        document.body.appendChild(el);
-        el.select();
-        document.execCommand('copy');
-        document.body.removeChild(el);
-        showToast('✓ E-mail copiado!');
+        drawerList.innerHTML = quoteItems.map((item, index) => `
+          <div class="drawer-item-card">
+            <div class="drawer-item-info">
+              <h4>${index + 1}. ${item.title}</h4>
+              <p>Medidas de ref: ${item.measure}</p>
+            </div>
+            <button class="drawer-item-remove" onclick="removeQuoteItem('${item.id}')" aria-label="Remover item">
+              ✕
+            </button>
+          </div>
+        `).join('');
       }
     }
 
-    // ── Active nav link ao scroll ──
-    const sections = document.querySelectorAll('section[id], div[id="inicio"]');
+    function toggleQuoteItem(id, title, measure, btn) {
+      const idx = quoteItems.findIndex(i => i.id === id);
+      if (idx > -1) {
+        quoteItems.splice(idx, 1);
+        showToast(`Item removido da cotação: ${title}`);
+      } else {
+        quoteItems.push({ id, title, measure });
+        showToast(`✓ Adicionado à cotação: ${title}`);
+      }
+      updateQuoteUI();
+    }
+
+    function removeQuoteItem(id) {
+      quoteItems = quoteItems.filter(i => i.id !== id);
+      updateQuoteUI();
+    }
+
+    openDrawerBtn.addEventListener('click', () => {
+      drawerOverlay.classList.add('open');
+      drawerOverlay.setAttribute('aria-hidden', 'false');
+    });
+
+    closeDrawerBtn.addEventListener('click', () => {
+      drawerOverlay.classList.remove('open');
+      drawerOverlay.setAttribute('aria-hidden', 'true');
+    });
+
+    drawerOverlay.addEventListener('click', (e) => {
+      if (e.target === drawerOverlay) {
+        drawerOverlay.classList.remove('open');
+        drawerOverlay.setAttribute('aria-hidden', 'true');
+      }
+    });
+
+    // ── Envio de Cotação Formatada para o WhatsApp ──
+    function sendQuoteWhatsApp() {
+      const notes = document.getElementById('quote-customer-notes').value.trim();
+      let msg = "Olá equipe ArtesEmFerro! Vim pelo site e gostaria de solicitar um orçamento:\n\n";
+
+      if (quoteItems.length > 0) {
+        msg += "📋 *ITENS DE INTERESSE:*\n";
+        quoteItems.forEach((item, i) => {
+          msg += `${i + 1}. *${item.title}* (Ref: ${item.measure})\n`;
+        });
+        msg += "\n";
+      } else {
+        msg += "Gostaria de uma proposta técnica para uma peça sob medida.\n\n";
+      }
+
+      if (notes) {
+        msg += `📝 *Observações / Medidas personalizadas:*\n${notes}\n\n`;
+      }
+
+      msg += "Poderiam me confirmar valores e previsão de prazo?";
+      const url = `https://wa.me/5514998278402?text=${encodeURIComponent(msg)}`;
+      window.open(url, '_blank');
+    }
+
+    // ── Filtros por Categoria & Busca em Tempo Real ──
+    let activeFilter = 'todos';
+    const products = document.querySelectorAll('.product-card');
+    const searchCatalogInput = document.getElementById('catalog-search-input');
+    const heroSearchField = document.getElementById('hero-search-field');
+
+    function applyCatalogFilters() {
+      const query = (searchCatalogInput.value || heroSearchField.value || '').toLowerCase().trim();
+
+      products.forEach(card => {
+        const category = card.getAttribute('data-category');
+        const title = (card.getAttribute('data-title') || '').toLowerCase();
+        const desc = card.querySelector('.card-desc').textContent.toLowerCase();
+
+        const matchCategory = (activeFilter === 'todos') || (category === activeFilter);
+        const matchSearch = !query || title.includes(query) || desc.includes(query);
+
+        if (matchCategory && matchSearch) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function filterCatalog(category) {
+      activeFilter = category;
+      document.querySelectorAll('.category-tab').forEach(tab => {
+        const filter = tab.getAttribute('data-filter');
+        const isActive = filter === category;
+        tab.classList.toggle('active', isActive);
+        tab.setAttribute('aria-selected', String(isActive));
+      });
+      applyCatalogFilters();
+
+      // Rola suavemente até o catálogo se disparado do Hero ou Footer
+      const catalogoEl = document.getElementById('catalogo');
+      const rect = catalogoEl.getBoundingClientRect();
+      if (rect.top < -100 || rect.top > 300) {
+        catalogoEl.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    searchCatalogInput.addEventListener('input', applyCatalogFilters);
+    heroSearchField.addEventListener('input', () => {
+      searchCatalogInput.value = heroSearchField.value;
+      applyCatalogFilters();
+      if (heroSearchField.value.trim().length > 0) {
+        document.getElementById('catalogo').scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+
+    // ── Observer para links ativos na navegação ──
+    const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
 
-    const observer = new IntersectionObserver((entries) => {
+    const navObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const id = entry.target.id;
-          navLinks.forEach(l => {
-            l.removeAttribute('aria-current');
-            if (l.getAttribute('href') === '#' + id) {
-              l.setAttribute('aria-current', 'page');
+          navLinks.forEach(link => {
+            link.removeAttribute('aria-current');
+            if (link.getAttribute('href') === '#' + id) {
+              link.setAttribute('aria-current', 'page');
             }
           });
         }
       });
-    }, { rootMargin: '-40% 0px -55% 0px' });
+    }, { rootMargin: '-35% 0px -55% 0px' });
 
-    document.querySelectorAll('section[id]').forEach(s => observer.observe(s));
+    sections.forEach(s => navObserver.observe(s));
+
+    // Inicializa interface da cotação
+    updateQuoteUI();
   </script>
 
 </body>
