@@ -1,0 +1,29 @@
+Este diretório contém as imagens dos produtos do catálogo.
+
+INSTRUÇÃO DE USO
+================
+
+Coloque aqui as fotos reais das peças fabricadas.
+Os arquivos esperados são:
+
+  suporte-estante.jpg       → Card 1: Suporte / Estante Artesanal
+  prateleira-suspensa.jpg   → Card 2: Prateleira Suspensa em Aço
+  mesa-estrutura.jpg        → Card 3: Mesa / Estrutura Sob Medida
+  grade-portao.jpg          → Card 4: Grade / Portão Artístico em Ferro
+  escada-corrimao.jpg       → Card 5: Escada / Corrimão Industrial
+  suporte-tv-painel.jpg     → Card 6: Suporte Mural para TV / Painel
+
+RECOMENDAÇÕES DE IMAGEM
+========================
+- Resolução mínima: 800 × 600 pixels (proporção 4:3)
+- Formato: .jpg ou .webp (qualidade 80-85%)
+- Tamanho máximo: 300 KB por imagem
+- Fundo neutro ou ambiente clean favorece a apresentação
+- Fotografe com boa iluminação natural ou luz fria difusa
+
+Após adicionar as fotos, edite o index.html:
+  1. Localize o card correspondente (busque pelo nome do arquivo nos comentários HTML)
+  2. Remova o bloco <div class="card-image-placeholder">...</div>
+  3. Adicione: <img src="./assets/catalog/NOME-DO-ARQUIVO.jpg" alt="Descrição da peça" loading="lazy" />
+
+Consulte o README.md na raiz do projeto para instruções completas.
