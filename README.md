@@ -15,10 +15,15 @@ Construído inteiramente em **HTML5 semântico** e **CSS3 puro**, sem frameworks
 
 ### Principais Características
 
-- **Catálogo Técnico:** Cards responsivos com especificações de materiais, acabamento e tabelas de medidas de referência.
-- **Orçamento Contextualizado:** Botões de contato direto via WhatsApp pré-preenchidos com o nome da peça de interesse.
-- **Política de Uso e Encomendas:** Página dedicada (`politica-de-uso.html`) detalhando direitos autorais, prazos, condições de orçamento, garantia estrutural e privacidade (LGPD).
-- **Acessibilidade e Performance:** Contraste adequado, navegação por teclado com foco visível, suporte a `prefers-reduced-motion`, caminhos estritamente relativos e carregamento sob demanda (`loading="lazy"`).
+- **Visual Metalúrgico Moderno:** Identidade técnica dark com malha blueprint industrial, gradientes em tom âmbar/cobre forja e alto contraste (inspirado no modelo do Grupo Imesul).
+- **Top Bar Utilitária:** Status de atendimento em tempo real, horários de oficina e canal direto para Bauru e interior de SP.
+- **Navegação por Aplicações:** Seleção rápida por tipo de demanda (Móveis & Interiores, Comércio & Lojas, Segurança & Fechamentos, Estruturas & Mezaninos).
+- **Busca em Tempo Real & Filtros por Categoria:** Pesquisa instantânea por nome, medida ou especificação técnica sem recarregar a página.
+- **Bandeja de Orçamento Interativa (Quote Tray):** Permite selecionar múltiplos produtos e compilar uma solicitação detalhada pronta para envio via WhatsApp em 1 clique.
+- **Como Solicitar Orçamento em 3 Passos:** Fluxo didático que orienta o cliente desde a escolha do material até o recebimento da proposta técnica.
+- **Catálogo Técnico Detalhado:** Cards responsivos com tags de materiais (Aço SAE 1020, solda MIG/MAG, pintura epóxi) e tabelas de medidas de referência.
+- **Política de Uso e Encomendas:** Página dedicada (`politica-de-uso.html`) com termos de garantia estrutural, prazos e privacidade.
+- **Acessibilidade e Performance:** HTML5 semântico, CSS puro sem frameworks pesados, suporte nativo a `prefers-reduced-motion` e total compatibilidade com **GitHub Pages**.
 
 ---
 
