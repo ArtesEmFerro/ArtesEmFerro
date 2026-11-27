@@ -130,6 +130,13 @@
          HERO SECTION (Estilo Imesul Metalúrgica)
     ═══════════════════════════════════════════ -->
     <section id="hero" aria-label="Apresentação — ArtesEmFerro">
+      <!-- Fundo em Vídeo Animado (Serralheiro com Esmerilhadeira e Faíscas) -->
+      <div class="hero-video-wrap" aria-hidden="true">
+        <video autoplay loop muted playsinline class="hero-video-bg">
+          <source src="./assets/fundo-animado-hero.webm" type="video/webm" />
+        </video>
+        <div class="hero-video-overlay"></div>
+      </div>
       <div class="industrial-grid-bg" aria-hidden="true"></div>
       <div class="industrial-radial-glow" aria-hidden="true"></div>
 
@@ -347,7 +354,7 @@
         <div class="catalog-filter-bar">
           <div class="category-tabs" role="tablist" aria-label="Filtro de categorias">
             <button class="category-tab active" data-filter="todos" onclick="filterCatalog('todos')" role="tab" aria-selected="true">
-              Todos <span class="tab-count" id="count-todos">6</span>
+              Todos <span class="tab-count" id="count-todos">7</span>
             </button>
             <button class="category-tab" data-filter="moveis" onclick="filterCatalog('moveis')" role="tab" aria-selected="false">
               Mesas &amp; Móveis <span class="tab-count" id="count-moveis">1</span>
@@ -362,7 +369,7 @@
               Escadas &amp; Corrimãos <span class="tab-count" id="count-estruturas">1</span>
             </button>
             <button class="category-tab" data-filter="especiais" onclick="filterCatalog('especiais')" role="tab" aria-selected="false">
-              Painéis &amp; Especiais <span class="tab-count" id="count-especiais">1</span>
+              Painéis &amp; Especiais <span class="tab-count" id="count-especiais">2</span>
             </button>
           </div>
 
@@ -392,11 +399,13 @@
             aria-label="Suporte Estante Artesanal"
           >
             <div class="card-image-wrap">
-              <div class="card-image-placeholder" aria-label="Aguardando foto: Suporte Estante Artesanal">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 9v6"/></svg>
-                <span>Suporte Estante Artesanal</span>
-                <span style="font-size:0.65rem;opacity:.6">assets/catalog/suporte-estante.jpg</span>
-              </div>
+              <img
+                src="./assets/catalog/suporte-estante.jpg"
+                alt="Suporte Estante Artesanal em Metalon e Madeira"
+                loading="lazy"
+                width="800"
+                height="600"
+              />
               <span class="card-badge">Sob Medida</span>
               <div class="card-spec-tags">
                 <span class="spec-tag">Perfil 20x20 mm</span>
@@ -479,11 +488,13 @@
             aria-label="Prateleira Suspensa em Aço"
           >
             <div class="card-image-wrap">
-              <div class="card-image-placeholder" aria-label="Aguardando foto: Prateleira Suspensa em Aço">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12H2l5-9 5 9H8M5 12v6a1 1 0 001 1h2a1 1 0 001-1v-6"/><path d="M14 12h8M14 8h8M14 16h8"/></svg>
-                <span>Prateleira Suspensa em Aço</span>
-                <span style="font-size:0.65rem;opacity:.6">assets/catalog/prateleira-suspensa.jpg</span>
-              </div>
+              <img
+                src="./assets/catalog/prateleira-suspensa.jpg"
+                alt="Prateleira Suspensa em Aço e Cantoneira 30x30"
+                loading="lazy"
+                width="800"
+                height="600"
+              />
               <span class="card-badge">Mais Vendido</span>
               <div class="card-spec-tags">
                 <span class="spec-tag">Cantoneira 30x30 mm</span>
@@ -566,11 +577,13 @@
             aria-label="Mesa Estrutura Sob Medida"
           >
             <div class="card-image-wrap">
-              <div class="card-image-placeholder" aria-label="Aguardando foto: Mesa / Estrutura Sob Medida">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="3" rx="1"/><path d="M5 10v7M19 10v7M7 17h10"/></svg>
-                <span>Mesa / Estrutura Sob Medida</span>
-                <span style="font-size:0.65rem;opacity:.6">assets/catalog/mesa-estrutura.jpg</span>
-              </div>
+              <img
+                src="./assets/catalog/mesa-estrutura.jpg"
+                alt="Mesa Estrutura Sob Medida em Tubo de Aço 50x30"
+                loading="lazy"
+                width="800"
+                height="600"
+              />
               <span class="card-badge">Linha Industrial</span>
               <div class="card-spec-tags">
                 <span class="spec-tag">Tubo 50x30 mm</span>
@@ -653,11 +666,13 @@
             aria-label="Grade e Portão Artístico em Ferro"
           >
             <div class="card-image-wrap">
-              <div class="card-image-placeholder" aria-label="Aguardando foto: Grade e Portão Artístico em Ferro">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 3v18M6 3v18M3 12h18M3 7h18M3 17h18"/></svg>
-                <span>Grade / Portão Artístico</span>
-                <span style="font-size:0.65rem;opacity:.6">assets/catalog/grade-portao.jpg</span>
-              </div>
+              <img
+                src="./assets/catalog/grade-portao.jpg"
+                alt="Grade e Portão Artístico em Barra Chata e Redonda"
+                loading="lazy"
+                width="800"
+                height="600"
+              />
               <span class="card-badge">Alta Segurança</span>
               <div class="card-spec-tags">
                 <span class="spec-tag">Barra Ø 12 mm</span>
@@ -740,11 +755,13 @@
             aria-label="Escada e Corrimão Industrial"
           >
             <div class="card-image-wrap">
-              <div class="card-image-placeholder" aria-label="Aguardando foto: Escada e Corrimão Industrial">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 20h4v-4h4v-4h4v-4h4V4"/><path d="M3 20L20 3"/></svg>
-                <span>Escada / Corrimão Industrial</span>
-                <span style="font-size:0.65rem;opacity:.6">assets/catalog/escada-corrimao.jpg</span>
-              </div>
+              <img
+                src="./assets/catalog/escada-corrimao.jpg"
+                alt="Escada e Corrimão Industrial com Chapa Xadrez"
+                loading="lazy"
+                width="800"
+                height="600"
+              />
               <span class="card-badge">Norma NBR 9077</span>
               <div class="card-spec-tags">
                 <span class="spec-tag">Chapa Xadrez 3 mm</span>
@@ -827,11 +844,13 @@
             aria-label="Suporte Mural para TV e Painel"
           >
             <div class="card-image-wrap">
-              <div class="card-image-placeholder" aria-label="Aguardando foto: Suporte Mural para TV e Painel">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-                <span>Suporte Mural para TV / Painel</span>
-                <span style="font-size:0.65rem;opacity:.6">assets/catalog/suporte-tv-painel.jpg</span>
-              </div>
+              <img
+                src="./assets/catalog/suporte-tv-painel.jpg"
+                alt="Suporte Mural Reforçado para TV e Painel"
+                loading="lazy"
+                width="800"
+                height="600"
+              />
               <span class="card-badge">Carga Pesada</span>
               <div class="card-spec-tags">
                 <span class="spec-tag">Barra 2" x 1/4"</span>
@@ -896,6 +915,109 @@
                   rel="noopener noreferrer"
                   class="btn btn-whatsapp btn-sm"
                   aria-label="Orçar Suporte de TV via WhatsApp"
+                >
+                  Orçar
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ─── CARD 7: Lixeira Retrátil para Fixação em Muro (Produto Real) ─── -->
+          <article
+            class="product-card"
+            data-category="especiais"
+            data-id="lixeira-retratil"
+            data-title="Lixeira Retrátil para Fixação em Muro"
+            data-measure="50 comp x 48 larg x 25 alt cm"
+            role="listitem"
+            aria-label="Lixeira Retrátil para Fixação em Muro"
+          >
+            <div class="card-image-wrap">
+              <img
+                src="./assets/catalog/lixeira-retratil.jpg"
+                alt="Lixeira Retrátil para Muro em Metalon 20x20 e Ferro 1/4"
+                id="img-lixeira"
+                loading="lazy"
+                width="800"
+                height="600"
+              />
+              <span class="card-badge">Lançamento</span>
+              <div class="card-thumb-switch" role="group" aria-label="Alternar foto aberta ou fechada">
+                <button type="button" class="thumb-btn active" onclick="switchLixeiraImg('./assets/catalog/lixeira-retratil.jpg', this)">Aberta</button>
+                <button type="button" class="thumb-btn" onclick="switchLixeiraImg('./assets/catalog/lixeira-retratil-fechada.jpg', this)">Fechada</button>
+              </div>
+              <div class="card-spec-tags">
+                <span class="spec-tag">Metalon 20x20 Ch. 18</span>
+                <span class="spec-tag">Ferro Maciço 1/4"</span>
+                <span class="spec-tag">Esmalte Grafite</span>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="card-header-meta">
+                <span class="card-category">Utilidades &amp; Segurança Urbana</span>
+              </div>
+              <h3 class="card-title">Lixeira Retrátil para Muro</h3>
+
+              <p class="card-desc">
+                Lixeira articulada retrátil projetada para fixação direta em muros ou fachadas residenciais e comerciais.
+                Fabricada em perfil metalon 20×20 mm (chapa 18 de alta espessura) com gradeamento e fundo em ferro maciço 1/4" (6,35 mm).
+                Sistema retrátil que recolhe rente à parede quando desocupada, liberando a calçada e prevenindo colisões de pedestres e veículos.
+                Pintura protetiva em esmalte sintético grafite de fino acabamento anticorrosivo.
+              </p>
+
+              <div class="measures-block">
+                <div class="measures-title">
+                  <span>Especificações Técnicas</span>
+                  <span>Sistema Articulado</span>
+                </div>
+                <table class="measures-table">
+                  <tbody>
+                    <tr>
+                      <td>Comprimento</td>
+                      <td>50 cm</td>
+                    </tr>
+                    <tr>
+                      <td>Largura (aberta)</td>
+                      <td>48 cm</td>
+                    </tr>
+                    <tr>
+                      <td>Altura do cesto</td>
+                      <td>25 cm</td>
+                    </tr>
+                    <tr>
+                      <td>Quadro estrutural</td>
+                      <td>Metalon 20×20 mm — chapa 18 (1,2 mm)</td>
+                    </tr>
+                    <tr>
+                      <td>Fundo e barras</td>
+                      <td>Ferro maciço redondo Ø 1/4" (6,35 mm)</td>
+                    </tr>
+                    <tr>
+                      <td>Acabamento</td>
+                      <td>Esmalte sintético grafite</td>
+                    </tr>
+                    <tr>
+                      <td>Fixação</td>
+                      <td>Muro com parafusos sextavados e buchas</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="card-actions-row">
+                <button
+                  class="btn btn-add-quote"
+                  onclick="toggleQuoteItem('lixeira-retratil', 'Lixeira Retrátil para Muro', '50x48x25 cm - Metalon 20x20 Ch. 18', this)"
+                >
+                  + Adicionar à Cotação
+                </button>
+                <a
+                  href="https://wa.me/5514998278402?text=Olá!%20Tenho%20interesse%20na%20Lixeira%20Retrátil%20para%20Muro%20(50x48x25cm%20em%20metalon%2020x20%20chapa%2018%20e%20ferro%201%2F4%20grafite).%20Poderia%20me%20passar%20um%20orçamento%3F"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-whatsapp btn-sm"
+                  aria-label="Orçar Lixeira Retrátil via WhatsApp"
                 >
                   Orçar
                 </a>
@@ -1542,6 +1664,17 @@
     }, { rootMargin: '-35% 0px -55% 0px' });
 
     sections.forEach(s => navObserver.observe(s));
+
+    // ── Alternador de imagem da lixeira retrátil (aberta / fechada) ──
+    function switchLixeiraImg(src, btn) {
+      const img = document.getElementById('img-lixeira');
+      if (img) img.src = src;
+      const parent = btn.parentElement;
+      if (parent) {
+        parent.querySelectorAll('.thumb-btn').forEach(b => b.classList.remove('active'));
+      }
+      btn.classList.add('active');
+    }
 
     // Inicializa interface da cotação
     updateQuoteUI();
