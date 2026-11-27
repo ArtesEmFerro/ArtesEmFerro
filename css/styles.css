@@ -298,17 +298,16 @@ img {
   text-decoration: none;
   flex-shrink: 0;
 }
-.site-logo-mark {
-  width: 42px; height: 42px;
-  display: flex; align-items: center; justify-content: center;
-  background: var(--color-copper);
-  border-radius: var(--radius-sm);
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: var(--text-xl);
-  color: var(--color-white);
-  letter-spacing: -0.04em;
-  line-height: 1;
+.site-logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
+  /* Logo preto/branco: inverte para ficar branco no fundo escuro */
+  filter: invert(1) brightness(1.05);
+  transition: opacity var(--transition-fast);
+}
+.site-logo:hover .site-logo-img {
+  opacity: 0.85;
 }
 .site-logo-text {
   display: flex;
@@ -945,8 +944,7 @@ img {
   align-items: start;
 }
 
-.footer-brand .site-logo-name { font-size: var(--text-xl); }
-.footer-brand .site-logo-tagline { margin-top: var(--space-1); }
+.footer-brand .site-logo-img { height: 42px; }
 
 .footer-brand-desc {
   font-size: var(--text-sm);
