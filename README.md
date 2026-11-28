@@ -16,10 +16,10 @@ Construído inteiramente em **HTML5 semântico** e **CSS3 puro**, sem frameworks
 ### Principais Características
 
 - **Visual Metalúrgico Moderno:** Identidade técnica dark com malha blueprint industrial, gradientes em tom âmbar/cobre forja e alto contraste (inspirado no modelo do Grupo Imesul).
-- **Top Bar Utilitária:** Status de atendimento em tempo real, horários de oficina e canal direto para Bauru e interior de SP.
+- **Top Bar Utilitária:** Horário de atendimento, área atendida (Bauru, Jaú, Botucatu, Marília e região Centro-Oeste Paulista) e canal direto pelo WhatsApp.
 - **Navegação por Aplicações:** Seleção rápida por tipo de demanda (Móveis & Interiores, Comércio & Lojas, Segurança & Fechamentos, Estruturas & Mezaninos).
 - **Busca em Tempo Real & Filtros por Categoria:** Pesquisa instantânea por nome, medida ou especificação técnica sem recarregar a página.
-- **Bandeja de Orçamento Interativa (Quote Tray):** Permite selecionar múltiplos produtos e compilar uma solicitação detalhada pronta para envio via WhatsApp em 1 clique.
+- **Bandeja de Orçamento Interativa (Quote Tray):** Permite selecionar produtos, ajustar quantidades, salvar a lista e as observações no navegador e enviar uma solicitação detalhada pelo WhatsApp.
 - **Como Solicitar Orçamento em 3 Passos:** Fluxo didático que orienta o cliente desde a escolha do material até o recebimento da proposta técnica.
 - **Catálogo Técnico Detalhado:** Cards responsivos com tags de materiais (Aço SAE 1020, solda MIG/MAG, pintura epóxi) e tabelas de medidas de referência.
 - **Política de Uso e Encomendas:** Página dedicada (`politica-de-uso.html`) com termos de garantia estrutural, prazos e privacidade.
@@ -49,8 +49,8 @@ ArtesEmFerro/
 
 ### Substituir imagens de referência (placeholders)
 
-1. Adicione as fotografias reais das peças em `./assets/catalog/` utilizando os nomes correspondentes (`suporte-estante.jpg`, `prateleira-suspensa.jpg`, `mesa-estrutura.jpg`, `grade-portao.jpg`, `escada-corrimao.jpg`, `suporte-tv-painel.jpg`) ou `./assets/sobre-oficina.jpg` para a seção institucional.
-2. No arquivo `index.html`, localize o bloco `<div class="card-image-placeholder">...</div>` do item desejado e substitua-o pela tag `<img>`:
+1. Substitua as fotografias de referência em `./assets/catalog/`, mantendo os nomes correspondentes (`suporte-estante.jpg`, `prateleira-suspensa.jpg`, `mesa-estrutura.jpg`, `grade-portao.jpg`, `escada-corrimao.jpg`, `suporte-tv-painel.jpg`). A seção institucional não depende de um arquivo de imagem externo.
+2. No arquivo `index.html`, atualize o `src` e o texto alternativo (`alt`) da imagem existente no card do item:
 
 ```html
 <img
