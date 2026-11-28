@@ -169,6 +169,7 @@ img {
 .industrial-grid-bg {
   position: absolute;
   inset: 0;
+  z-index: 2;
   background-image: 
     linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
@@ -179,6 +180,7 @@ img {
 .industrial-radial-glow {
   position: absolute;
   inset: 0;
+  z-index: 2;
   background: 
     radial-gradient(circle at 15% 20%, rgba(217, 119, 6, 0.15), transparent 45%),
     radial-gradient(circle at 85% 65%, rgba(31, 51, 84, 0.35), transparent 50%);
@@ -555,7 +557,7 @@ img {
   position: absolute;
   inset: 0;
   overflow: hidden;
-  z-index: 0;
+  z-index: 1;
   pointer-events: none;
 }
 .hero-video-bg {
@@ -563,23 +565,23 @@ img {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  opacity: 0.45;
+  opacity: 0.62;
   transform: scale(1.06);
   transform-origin: top left;
-  filter: brightness(0.92) contrast(1.15);
+  filter: brightness(0.95) contrast(1.12);
 }
 .hero-video-overlay {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to top, var(--color-steel-950) 8%, rgba(5, 11, 20, 0.75) 50%, rgba(5, 11, 20, 0.88) 100%),
-    linear-gradient(to right, rgba(5, 11, 20, 0.96) 0%, rgba(5, 11, 20, 0.45) 50%, rgba(5, 11, 20, 0.92) 100%);
+    linear-gradient(to top, var(--color-steel-950) 4%, rgba(5, 11, 20, 0.45) 48%, rgba(5, 11, 20, 0.7) 100%),
+    linear-gradient(to right, rgba(5, 11, 20, 0.88) 0%, rgba(5, 11, 20, 0.25) 55%, rgba(5, 11, 20, 0.65) 100%);
   z-index: 1;
 }
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   max-width: 880px;
 }
 
@@ -1347,6 +1349,10 @@ img {
   opacity: 0.35;
   color: var(--color-amber-400);
 }
+.drawer-empty-state p {
+  font-size: var(--text-xs);
+  margin-top: 6px;
+}
 
 .drawer-item-card {
   background: var(--color-steel-850);
@@ -1354,7 +1360,7 @@ img {
   border-radius: var(--radius-md);
   padding: var(--space-4);
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: var(--space-3);
 }
@@ -1369,15 +1375,57 @@ img {
   color: var(--color-steel-400);
   margin-top: 3px;
 }
-.drawer-item-remove {
-  background: transparent;
-  border: none;
-  color: var(--color-steel-400);
+.drawer-item-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+.drawer-quantity-btn {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--color-steel-600);
+  border-radius: var(--radius-sm);
+  background: var(--color-steel-900);
+  color: var(--color-steel-white);
+  font-size: var(--text-base);
   cursor: pointer;
-  padding: 4px;
+}
+.drawer-quantity-btn:hover {
+  border-color: var(--color-amber-400);
+  color: var(--color-amber-400);
+}
+.drawer-quantity-value {
+  min-width: 6ch;
+  color: var(--color-steel-white);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-align: center;
+}
+.drawer-item-remove {
+  padding: 6px 8px;
+  border: 1px solid var(--color-steel-700);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-steel-400);
+  font-size: var(--text-2xs);
+  cursor: pointer;
 }
 .drawer-item-remove:hover {
   color: #ef4444;
+  border-color: #ef4444;
+}
+.drawer-clear-btn {
+  align-self: flex-end;
+  padding: 4px 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-amber-400);
+  font: inherit;
+  font-size: var(--text-xs);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
 }
 
 .drawer-footer {
@@ -1933,6 +1981,18 @@ img {
   .container {
     padding-inline: var(--space-4);
   }
+  .header-actions {
+    gap: var(--space-2);
+  }
+  .header-actions .btn-whatsapp {
+    display: none;
+  }
+  .quote-tray-btn {
+    padding: 0.5rem;
+  }
+  .quote-tray-btn > span:not(.quote-counter-badge) {
+    display: none;
+  }
   .catalog-grid {
     grid-template-columns: 1fr;
   }
@@ -1944,6 +2004,17 @@ img {
   }
   .card-actions-row {
     grid-template-columns: 1fr;
+  }
+  .drawer-item-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .drawer-item-controls {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .drawer-item-remove {
+    margin-left: auto;
   }
 }
 
