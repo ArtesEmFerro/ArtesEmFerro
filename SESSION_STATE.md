@@ -1,48 +1,111 @@
-# SESSION_STATE.md — ArtesEmFerro
+# SESSION STATE — ArtesEmFerro
 
-**Data da Sessão:** 2026-11-27  
-**Branch de Trabalho:** `feature/redesign-estilo-imesul`  
-**Status do Projeto:** Operacional / Estável / Pronto para Deploy  
-
----
-
-## 1. O que foi feito
-- **Fundo em Vídeo no Hero (Esmerilhadeira com Faíscas):**
-  - Integração do vídeo `assets/fundo-animado-hero.webm` no background do Hero em loop, mudo e com reprodução automática (`autoplay loop muted playsinline`).
-  - **Tratamento da marca d'água:** Processamento via `ffmpeg` com corte técnico das margens inferiores/direitas (`crop=1880:990:0:0`), reforçado no CSS com `transform: scale(1.06)` e vinheta gradiente escura sobreposta, eliminando 100% da marca do Grupo Imesul.
-- **Inserção do Novo Produto Real — Lixeira Retrátil para Fixação em Muro:**
-  - Cadastro no catálogo do item em Metalon 20×20 mm (chapa 18), ferro maciço redondo 1/4" e acabamento em esmalte sintético grafite.
-  - Medidas de referência: 50 cm comp. × 48 cm larg. × 25 cm alt.
-  - Implementação de alternador interativo de fotos no card (visualização Aberta / Fechada) utilizando as fotos reais `assets/catalog/lixeira-retratil.jpg` e `assets/catalog/lixeira-retratil-fechada.jpg`.
-- **Geração de Imagens Técnicas Ilustrativas:**
-  - Criação de 6 ilustrações técnicas em alta resolução (estilo render 3D / blueprint arquitetônico) para todos os itens do catálogo:
-    1. `suporte-estante.jpg`
-    2. `prateleira-suspensa.jpg`
-    3. `mesa-estrutura.jpg`
-    4. `grade-portao.jpg`
-    5. `escada-corrimao.jpg`
-    6. `suporte-tv-painel.jpg`
-  - Substituição completa de todos os blocos de placeholder SVG por imagens reais nos cards.
-- **Organização Limpa de Arquivos:**
-  - Remoção dos arquivos pesados da raiz (`fundo-animado-hero.webm`, `lixeira-retratil-fixacao-muro.jpeg`, `lixeira-retratil-fixacao-muro-fechada.jpeg`) e centralização estruturada em `assets/` e `assets/catalog/`.
+> Última atualização: 2026-11-28
+> Branch ativa: `feature/tema-claro-visibilidade`
 
 ---
 
-## 2. Decisões tomadas
-- **Eliminação de Marca d'água via Pipeline de Mídia + CSS:** A remoção do logotipo externo foi resolvida de forma definitiva tanto no arquivo de vídeo quanto no container CSS (dupla proteção contra vazamento visual).
-- **Armazenamento Estruturado de Mídia:** Todas as imagens e vídeos foram movidos para a pasta `assets/`, mantendo a raiz do projeto limpa e pronta para o versionamento do GitHub Pages.
+## Resumo da Sessão Atual
+
+### Objetivo
+Refatoração completa do site ArtesEmFerro para **tema claro profissional (Light Industrial)** com:
+- Paleta claro/branco + tipografia escura de alto contraste
+- Hero com vídeo visível + painel translúcido apenas à esquerda (texto)
+- Cards de catálogo com renders 3D sobre fundo branco/neutro
+- Imagem real da oficina (`assets/sobre-oficina.jpg`) na seção "Estrutura & Oficina"
+- Branch: `feature/tema-claro-visibilidade` → PR para `main`
 
 ---
 
-## 3. O que falta / Próximos passos
-- [x] Inserir ilustrações e fotos reais no catálogo (Concluído).
-- [x] Integrar vídeo hero com remoção da marca d'água (Concluído).
-- [ ] Enviar commits para a branch `feature/redesign-estilo-imesul` no GitHub.
-- [ ] Realizar merge da Pull Request no GitHub para publicação no GitHub Pages.
+## Status dos Arquivos Modificados
+
+| Arquivo | Status | Descrição |
+|---|---|---|
+| `css/styles.css` | ✅ MODIFICADO | Reescrito completo — Light Industrial Theme v3.0 |
+| `index.html` | ✅ MODIFICADO | Meta theme-color, video attrs, cards reestruturados, sobre-oficina.jpg |
+| `politica-de-uso.html` | ✅ MODIFICADO | Meta theme-color adicionado |
+| `assets/hero-poster.jpg` | ✅ NOVO | Poster/fallback do vídeo hero |
+| `assets/sobre-oficina.jpg` | ✅ NOVO | Foto realista de oficina de serralheria |
+| `assets/catalog/suporte-estante.jpg` | ✅ SUBSTITUÍDO | Render 3D fundo branco |
+| `assets/catalog/prateleira-suspensa.jpg` | ✅ SUBSTITUÍDO | Render 3D fundo branco |
+| `assets/catalog/mesa-estrutura.jpg` | ✅ SUBSTITUÍDO | Render 3D fundo branco |
+| `assets/catalog/grade-portao.jpg` | ✅ SUBSTITUÍDO | Render 3D fundo branco |
+| `assets/catalog/escada-corrimao.jpg` | ✅ SUBSTITUÍDO | Render 3D fundo branco |
+| `assets/catalog/suporte-tv-painel.jpg` | ✅ SUBSTITUÍDO | Render 3D fundo branco |
 
 ---
 
-## 4. Estado atual da aplicação
-- **Catálogo:** 7 produtos técnicos completos com imagens ativas e botão de orçamento.
-- **Vídeo do Hero:** Operacional com carregamento otimizado.
-- **Navegação e filtros:** 100% funcionais no desktop e mobile.
+## Tokens de Design Aplicados (CSS Custom Properties)
+
+```css
+/* Fundo */
+--color-bg-main:        #f8fafc;   /* fundo principal claro */
+--color-bg-alt:         #f1f5f9;   /* seções alternadas */
+--color-surface-card:   #ffffff;   /* cards */
+--color-border:         #e2e8f0;   /* bordas finas */
+
+/* Tipografia */
+--color-text-primary:   #0f172a;   /* títulos H1-H3 */
+--color-text-body:      #334155;   /* parágrafos */
+--color-text-muted:     #64748b;   /* legendas, specs */
+
+/* Destaque laranja/âmbar */
+--color-amber-500:      #ea580c;   /* laranja — CTAs, badges */
+--color-amber-700:      #b45309;   /* âmbar escuro — WCAG AA em branco */
+
+/* WhatsApp */
+--color-whatsapp:       #16a34a;   /* verde acessível */
+
+/* Aliases de compatibilidade (para politica-de-uso.html inline) */
+--color-iron:           #0f172a;
+--color-copper:         #b45309;
+--color-ash:            #64748b;
+--color-steel-50:       #f8fafc;
+--color-steel-100:      #f1f5f9;
+--color-steel-200:      #e2e8f0;
+--color-steel-700:      #e2e8f0;
+--color-steel-850:      #ffffff;
+--color-steel-900:      #0f172a;
+```
+
+---
+
+## Overlay do Vídeo Hero
+
+**Técnica:** Gradiente direcional horizontal, cobrindo apenas a metade esquerda.
+
+```css
+.hero-video-overlay {
+  background: linear-gradient(
+    90deg,
+    rgba(248,250,252,0.97)  0%,
+    rgba(248,250,252,0.90) 25%,
+    rgba(248,250,252,0.72) 42%,
+    rgba(248,250,252,0.40) 56%,
+    rgba(248,250,252,0.10) 72%,
+    rgba(248,250,252,0.00) 100%
+  );
+}
+/* Vídeo: opacity: 1, filter: brightness(1.06) contrast(1.06) saturate(1.12) */
+/* object-position: 70% center; transform: scale(1.11) */
+```
+
+No desktop, o texto fica sobre a área coberta pelo gradiente (esquerda), enquanto o vídeo é totalmente visível à direita.
+
+---
+
+## Próximos Passos
+
+- [ ] Validação visual no navegador (abrir `index.html` localmente)
+- [ ] Revisar PR aberto no GitHub: `feature/tema-claro-visibilidade` → `main`
+- [ ] Merge após aprovação
+
+---
+
+## Restrições Permanentes
+
+- **Nunca commitar direto em `main`** — apenas via PR
+- Commits semânticos: `feat:`, `fix:`, `refactor:`, `chore:`
+- Preservar toda funcionalidade: filtros, bandeja/gaveta de cotação, envio WhatsApp, busca, lixeira image switcher
+- Site estático — sem build step, compatível com GitHub Pages
+- Logo: `mix-blend-mode: multiply` (não `filter: invert`) no tema claro
